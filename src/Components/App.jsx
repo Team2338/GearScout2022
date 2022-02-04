@@ -19,20 +19,19 @@ class App extends React.Component{
   }
 
   render(){
-    let data;
+    let page;
     if (this.state.page ){
-      data = <LandingPage/>;
+      page = <LandingPage parentCallback = {this.changePage}/>;
     }
     else{
-      data = <DataCollectionPage/>;
+      page = <DataCollectionPage/>;
     }
     
     return(
       <React.Fragment>
-        {data}
-        <button type="button" onClick={this.changePage}>To Data Collection Page</button>
-        <button type="button" onClick={this.addCount}>Add To Count</button>
-
+        
+        {page}
+        {/* <button type="button" onClick={this.changePage}>To Data Collection Page</button> */}
       </React.Fragment>
     )
   }

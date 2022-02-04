@@ -1,5 +1,10 @@
 import React from "react";
 class LandingPage extends React.Component{
+
+  handleClick = (event) => {
+    this.props.parentCallback();
+  };
+
   render(){
     return(
       <div className='wrapper'>
@@ -12,7 +17,7 @@ class LandingPage extends React.Component{
         <h3>Secret Code: </h3>
         <input className='text-box' type='Text'placeholder='Secret Code: '></input>
         <div>*Secret code hint*</div>
-        <button className='button' type="button">Submit</button>
+        <button className='button' type="button" onClick={this.handleClick}>Submit</button>
         <img src='./2338logo.png' className='logo'></img>
       </div>
     )
