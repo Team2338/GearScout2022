@@ -1,3 +1,4 @@
+import react from "react";
 import React from "react";
 import './DataCollectionPage.css';
 class DataCollectionPage extends React.Component{
@@ -7,10 +8,13 @@ class DataCollectionPage extends React.Component{
       autoTaxi: false,
       autoLowCount: 0,
       autoHighCount: 0,
+      autoMissCount: 0,
       teleopLowCount: 0,
       teleopHighCount: 0,
+      teleopMissCount: 0,
       teleopDefence: false,
       climbState: 0,
+      climbLevel: "none",
       foul: 0,
       techFoul: 0,
       yellowCard: 0,
@@ -36,7 +40,7 @@ class DataCollectionPage extends React.Component{
 
   doesAutoTaxi = (event)=>{
     this.setState({
-      disable: true
+      autoTaxi: true
     })
   }
 
@@ -46,27 +50,73 @@ class DataCollectionPage extends React.Component{
     })
   }
 
+  climbNone = (event)=>{
+    if (this.state.climbState = 1) {
+      this.setState({
+        climbLevel: "none"
+      })
+    }
+  }
+
+  climbLow = (event)=>{
+    if (this.state.climbState = 2) {
+      this.setState({
+        climbLevel: "low"
+      })
+    }
+  }
+    
+  climbMid = (event)=>{
+    if (this.state.climbState = 3) {
+      this.setState({
+        climbLevel: "mid"
+      })
+    }
+  }
+
+  climbHigh = (event)=>{
+    if (this.state.climbState = 4) {
+      this.setState({
+        climbLevel: "high"
+      })
+    }
+  }
+  
+  climbTraversal = (event)=>{
+    if (this.state.climbState = 5) {
+      this.setState({
+        climbLevel: "traversal"
+      })
+    }
+  }
+
+  noClimb = (event)=>{
+    this.setState({
+      climbState: 1
+    })
+  }
+
   lowClimb = (event)=>{
     this.setState({
-      teleopDefence: 1
+      climbState: 2
     })
   }
 
   midClimb = (event)=>{
     this.setState({
-      teleopDefence: 2
+      climbState: 3
     })
   }
 
   highClimb = (event)=>{
     this.setState({
-      teleopDefence: 3
+      climbState: 4
     })
   }
 
   traversalClimb = (event)=>{
     this.setState({
-      teleopDefence: 4
+      climbState: 5
     })
   }
 
@@ -83,20 +133,6 @@ class DataCollectionPage extends React.Component{
   }
 
     render(){
-      console.log("Taxi: " + this.state.autoTaxi)
-      console.log("Auto low: " + this.state.autoLowCount)
-      console.log("Auto high: " + this.state.autoHighCount)
-      console.log("Teleop low: " + this.state.teleopLowCount)
-      console.log("Teleop high: " + this.state.teleopHighCount)
-      console.log("Defence: " + this.state.teleopDefence)
-      console.log("Climb: " + this.state.climbState)
-      console.log("Fouls: " + this.state.foul)
-      console.log("Tech fouls: " + this.state.techFoul)
-      console.log("Yellow cards: " + this.state.yellowCard)
-      console.log("Red cards: " + this.state.redCard)
-      console.log("Disabled: " + this.state.disable)
-      console.log("Disqualified: " + this.state.disqualify)
-
         return (
             <div>
               <div className="wrapper">
@@ -109,6 +145,13 @@ class DataCollectionPage extends React.Component{
                   <div className='outline-box'>Taxi</div>
                   <div className='outline-box'>Low</div>
                   <div className='outline-box'>High</div>
+                  <div className='outline-box'>Miss</div>
+                </div>
+                <div className='center'>
+                  <div>{this.state.autoTaxi.toString()}</div>
+                  <div>{this.state.autoLowCount}</div>
+                  <div>{this.state.autoHighCount}</div>
+                  <div>{this.state.autoMissCount}</div>
                 </div>
                 <div className='center'>
                   <div className='plus-minus-margin'>
@@ -122,15 +165,29 @@ class DataCollectionPage extends React.Component{
                     <button name='autoHighCount' className='plus-minus-button' type="button" onClick={this.subtractCount}>-</button>
                     <button name='autoHighCount' className='plus-minus-button' type="button" onClick={this.addCount}>+</button>
                   </div>
+                  <div className='plus-minus-margin'>
+                    <button name="autoMissCount" className='plus-minus-button' type="button" onClick={this.subtractCount}>-</button>
+                    <button name="autoMissCount" className='plus-minus-button' type="button" onClick={this.addCount}>+</button>
+                  </div>
                 </div>
       
                 <h3>Teleop</h3>
                 <div className='center'>
+                  <div className='outline-box'>Defence</div>
                   <div className='outline-box'>Low</div>
                   <div className='outline-box'>High</div>
-                  <div className='outline-box'>Defence</div>
+                  <div className='outline-box'>Miss</div>
                 </div>
                 <div className='center'>
+                  <div>{this.state.teleopDefence.toString()}</div>
+                  <div>{this.state.teleopLowCount}</div>
+                  <div>{this.state.teleopHighCount}</div>
+                  <div>{this.state.teleopMissCount}</div>
+                </div>
+                <div className='center'>
+                  <div className='plus-minus-margin'>
+                    <button className='plus-minus-button' type="button" onClick={this.doesTeleopDefence}>✓</button>
+                  </div>
                   <div className='plus-minus-margin'>
                     <button name="teleopLowCount" className='plus-minus-button' type="button" onClick={this.subtractCount}>-</button>
                     <button name="teleopLowCount" className='plus-minus-button' type="button" onClick={this.addCount}>+</button>
@@ -140,7 +197,8 @@ class DataCollectionPage extends React.Component{
                     <button name="teleopHighCount" className='plus-minus-button' type="button" onClick={this.addCount}>+</button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <button className='plus-minus-button' type="button" onClick={this.doesTeleopDefence}>✓</button>
+                    <button name="teleopMissCount" className='plus-minus-button' type="button" onClick={this.subtractCount}>-</button>
+                    <button name="teleopMissCount" className='plus-minus-button' type="button" onClick={this.addCount}>+</button>
                   </div>
                 </div>
       
@@ -149,25 +207,37 @@ class DataCollectionPage extends React.Component{
                   <div className='outline-box'>Hanger</div>
                 </div>
                 <div className='center'>
+                  <div>{this.state.climbLevel}</div>
+                </div>
+                <div className='center'>
                   <div className='plus-minus-margin'>
-                    <button className='plus-minus-button' type="button" onClick={this.lowClimb}>Low</button>
+                    <button className='plus-minus-button' type="button" onClick={this.noClimb} onClick={this.climbNone}>none</button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <button className='plus-minus-button' type="button"  onClick={this.midClimb}>Mid</button>
+                    <button className='plus-minus-button' type="button" onClick={this.lowClimb} onClick={this.climbLow}>Low</button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <button className='plus-minus-button' type="button" onClick={this.highClimb}>High</button>
+                    <button className='plus-minus-button' type="button" onClick={this.midClimb} onClick={this.climbMid}>Mid</button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <button className='plus-minus-button' type="button" onClick={this.traversalClimb}>Traversal </button>
+                    <button className='plus-minus-button' type="button" onClick={this.highClimb} onClick={this.climbHigh}>High</button>
+                  </div>
+                  <div className='plus-minus-margin'>
+                    <button className='plus-minus-button' type="button" onClick={this.traversalClimb} onClick={this.climbTraversal}>Traversal </button>
                   </div>
                 </div>
+
       
                 <h3>Penalties</h3>
                 <div className='center'>
                   <div className='outline-box'>Fouls</div>
                   <div className='outline-box'>Technical Fouls</div>
                   <div className='outline-box'>Yellow Cards</div>
+                </div>
+                <div className='center'>
+                  <div>{this.state.foul}</div>
+                  <div>{this.state.techFoul}</div>
+                  <div>{this.state.yellowCard}</div>
                 </div>
                 <div className='center'>
                   <div className='plus-minus-margin'>
@@ -187,6 +257,11 @@ class DataCollectionPage extends React.Component{
                   <div className='outline-box'>Red Cards</div>
                   <div className='outline-box'>Disabled</div>
                   <div className='outline-box'>Disqualified</div>
+                </div>
+                <div className='center'>
+                  <div>{this.state.redCard}</div>
+                  <div>{this.state.disable.toString()}</div>
+                  <div>{this.state.disqualify.toString()}</div>
                 </div>
                 <div className='center'>
                   <div className='plus-minus-margin'>
