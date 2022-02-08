@@ -7,14 +7,20 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      page: true
+      page: true,
+      teamNumber: "9999",
+      eventCode: "",
+      secretCode: ""
     }
   }
 
   // landing page = true; data page = false
-  changePage = (event)=>{
+  changePage = (event, teamNumber, eventCode, secretCode)=>{
     this.setState({
-      page: false
+      page: false,
+      teamNumber: teamNumber,
+      eventCode: eventCode,
+      secretCode: secretCode
     });
   }
 
@@ -24,14 +30,12 @@ class App extends React.Component{
       page = <LandingPage parentCallback = {this.changePage}/>;
     }
     else{
-      page = <DataCollectionPage/>;
+      page = <DataCollectionPage teamNumber={this.state.teamNumber} eventCode={this.state.eventCode} secretCode={this.state.secretCode}/>;
     }
     
     return(
       <React.Fragment>
-        
         {page}
-        {/* <button type="button" onClick={this.changePage}>To Data Collection Page</button> */}
       </React.Fragment>
     )
   }
