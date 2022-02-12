@@ -21,7 +21,8 @@ class DataCollectionPage extends React.Component{
       yellowCard: 0,
       redCard: 0,
       disable: false,
-      disqualify: false
+      disqualify: false,
+      scoutingTeamNumber: ""
     }
   }
 
@@ -133,9 +134,13 @@ class DataCollectionPage extends React.Component{
       disqualify: true
     })
   }
+  
+  handleTextBox = (event) => {
+    this.props.parentCallback(event, this.state.scoutingTeamNumber);
+  };
 
   submitData = ()=>{
-    const url = "/team/" + this.props.teamNumber;
+    const url = "/team/" + this.props.scoutingTeamNumber;
     const config = {
       headers: {
         secretCode: this.props.secretCode
@@ -231,7 +236,7 @@ class DataCollectionPage extends React.Component{
         return (
             <div>
               <div className="wrapper">
-                <h2 className='subtitle-2'>Scouting App</h2>
+                <h2 className='subtitle-2' onChange={this.handleTextBox}>Scouting App</h2>
                 <div className='button'></div>
                 <input className='text-box' type='Text'placeholder='Team Number: '></input>
                 
