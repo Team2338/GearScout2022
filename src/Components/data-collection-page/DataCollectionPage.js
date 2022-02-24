@@ -6,7 +6,7 @@ class DataCollectionPage extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      autoTaxi: false,
+      autoTaxi: 0,
       autoLowCount: 0,
       autoHighCount: 0,
       autoMissCount: 0,
@@ -36,7 +36,12 @@ class DataCollectionPage extends React.Component{
 
   doesAutoTaxi = (event)=>{
     this.setState({
-      autoTaxi: true
+      autoTaxi: 5
+    })
+  }
+  Taxiundobutton = (event)=>{
+    this.setState({
+      autoTaxi: 0
     })
   }
 
@@ -200,9 +205,11 @@ class DataCollectionPage extends React.Component{
                   <div className='outline-box'>
                     <h3>Taxi</h3>
                     <div className='plus-minus-margin'>
+                      <Button className='plus-minus-button' type="button"  variant="contained" onClick={this.Taxiundobutton}>X</Button>
                       <Button className='plus-minus-button' type="button" variant="contained" onClick={this.doesAutoTaxi}>✓</Button>
                     </div>
                     <div>{this.state.autoTaxi.toString()}</div>
+                    
                   </div>
                   <div className='outline-box'>
                     <h3>Low</h3>
@@ -229,7 +236,9 @@ class DataCollectionPage extends React.Component{
                     <div>{this.state.autoMissCount}</div>
                   </div> 
                 </div>
-      
+               
+                 
+             
                 <h3>Teleop</h3>
                 <div className='center'>
                   <div className='outline-box'>
