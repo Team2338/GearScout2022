@@ -219,6 +219,9 @@ class DataCollectionPage extends React.Component{
                     </div>
                     <div>{this.state.autoLowCount}</div>
                   </div>
+                </div>
+
+                <div className='center'>
                   <div className='outline-box'>
                     <h3>High</h3>
                     <div className='plus-minus-margin'>
@@ -256,6 +259,9 @@ class DataCollectionPage extends React.Component{
                     </div>
                     <div>{this.state.teleopLowCount}</div>
                   </div>
+                </div>
+
+                <div className='center'>
                   <div className='outline-box'>
                     <h3>High</h3>
                     <div className='plus-minus-margin'>
@@ -287,6 +293,11 @@ class DataCollectionPage extends React.Component{
                     <div className='plus-minus-margin'>
                       <Button className='plus-minus-button' type="button" variant="contained" onClick={this.midClimb} onClick={this.climbMid}>Mid</Button>
                     </div>
+                    </div> 
+
+                    <div className="space"></div>
+
+                    <div className="center">
                     <div className='plus-minus-margin'>
                       <Button className='plus-minus-button' type="button" variant="contained" onClick={this.highClimb} onClick={this.climbHigh}>High</Button>
                     </div>
@@ -294,7 +305,9 @@ class DataCollectionPage extends React.Component{
                       <Button className='plus-minus-button' type="button" variant="contained" onClick={this.traversalClimb} onClick={this.climbTraversal}>Traversal </Button>
                     </div>
                     </div>
+
                     <div>{this.state.climbLevel}</div>
+
                   </div>
                 </div>
 
