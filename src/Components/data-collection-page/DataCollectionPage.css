@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items:center;
     color: #babfb7;
     background-color: #02243e;
     font-family: "Segoe UI";
@@ -22,7 +23,6 @@
   
   .center {
     display: flex;
-    flex-direction: row;
     margin: auto;
   }
   
@@ -47,16 +47,24 @@
   .outline-box{
     outline: 3px solid #babfb7;
     margin: 10px;
-    padding: 8px;
+    padding-bottom: 10px;
+    text-align:center;
+    min-width: 160px;
   }
   
   .plus-minus-button{
     color: #fe5000;
     background-color: #babfb7;
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+    
   }
   
   .plus-minus-margin{
-    margin-right: 25px;
+    margin-right: -3.9px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
   }
   
   
@@ -67,3 +75,9 @@
     margin-left: 600px;
     margin-right: 600px;
   }
+
+ /* @media only screen and (min-width:786px) {
+  .center{
+    display: grid;
+  }
+} */
