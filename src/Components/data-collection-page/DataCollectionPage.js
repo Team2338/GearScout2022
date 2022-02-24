@@ -16,12 +16,6 @@ class DataCollectionPage extends React.Component{
       teleopDefence: false,
       climbState: 0,
       climbLevel: "none",
-      foul: 0,
-      techFoul: 0,
-      yellowCard: 0,
-      redCard: 0,
-      disable: false,
-      disqualify: false,
       scoutingTeamNumber: ""
     }
   }
@@ -122,18 +116,7 @@ class DataCollectionPage extends React.Component{
     })
   }
 
-  addDisable = (event)=>{
-    this.setState({
-      disable: true
-    })
-  }
-
-
-  addDisqualify = (event)=>{
-    this.setState({
-      disqualify: true
-    })
-  }
+ 
   
   handleTextBox = (event) => {
     this.props.parentCallback(event, this.state.scoutingTeamNumber);
@@ -196,37 +179,9 @@ class DataCollectionPage extends React.Component{
           gamemode: "Teleop",
           objective: "Hanger",
           count: this.state.climbState
-        },
-        {
-          gamemode: "Penalties",
-          objective: "Foul",
-          count: this.state.foul
-        },
-        {
-          gamemode: "Penalties",
-          objective: "Tech Foul",
-          count: this.state.techFoul
-        },
-        {
-          gamemode: "Penalties",
-          objective: "Yellow Card",
-          count: this.state.yellowCard
-        },
-        {
-          gamemode: "Penalties",
-          objective: "Red Card",
-          count: this.state.foul
         }
-        // {
-        //   gamemode: "Penalties",
-        //   objective: "Disable",
-        //   count: this.state.disable
-        // },
-        // {
-        //   gamemode: "Penalties",
-        //   objective: "Disqualify",
-        //   count: this.state.disqualify
-        // }
+        
+         
       ]
     }
     GearscoutService.post(url, body, config)
@@ -335,74 +290,25 @@ class DataCollectionPage extends React.Component{
                 </div>
 
       
-                <h3>Penalties</h3>
-                <div className='center'>
-                  <div className='outline-box'>Fouls
-                    <div>{this.state.foul}</div>
-                    <div className='plus-minus-margin'>
-                      <Button name="foul" className='plus-minus-button' type="button" variant="contained" onClick={this.subtractCount}>-</Button>
-                      <Button name="foul" className='plus-minus-button' type="button" variant="contained" onClick={this.addCount}>+</Button>
-                  </div>
-                  </div>
-                  <div className='outline-box'>Technical Fouls
-                  <div>{this.state.techFoul}</div>
-                  <div className='plus-minus-margin'>
-                    <Button name="techFoul" className='plus-minus-button' type="button" variant="contained" onClick={this.subtractCount}>-</Button>
-                    <Button name="techFoul" className='plus-minus-button' type="button" variant="contained" onClick={this.addCount}>+</Button>
-                  </div>
-                  </div>
-                  <div className='outline-box'>Yellow Cards
-                  <div>{this.state.yellowCard}</div>
-                  <div className='plus-minus-margin'>
-                    <Button name="yellowCard" className='plus-minus-button' type="button" variant="contained" onClick={this.subtractCount}>-</Button>
-                    <Button name="yellowCard" className='plus-minus-button' type="button" variant="contained" onClick={this.addCount}>+</Button>
-                  </div>
-                  </div>
-                </div>
-                <div className='center'>
+                
+         
+                 
+                  
+                 
+                 
+               
+                  
+                  
+               
+                  
+                
+                 
+                 
+              
                   
                   
                   
-                </div>
-                <div className='center'>
-                  
-                  <div className='plus-minus-margin'>
-                    
-                  </div>
-                  
-                </div>
-                <div className='center'>
-                  <div className='outline-box'>Red Cards
-                    <div>{this.state.redCard}</div>
-                    <div className='plus-minus-margin'>
-                      <Button name="redCard" className='plus-minus-button' type="button" variant="contained" onClick={this.subtractCount}>-</Button>
-                      <Button name="redCard" className='plus-minus-button' type="button" variant="contained" onClick={this.addCount}>+</Button>
-                  </div>
-                  </div>
-                  <div className='outline-box'>Disabled
-                    <div>{this.state.disable.toString()}
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.addDisable} >✓</Button>
-                    </div>
-                    </div>
-                  </div>
-                  <div className='outline-box'>Disqualified
-                    <div>{this.state.disqualify.toString()}</div>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.addDisqualify}>✓</Button>
-                    </div>
-                  </div>
-                </div>
-                <div className='center'>
-                  
-                  
-                  
-                </div>
-                <div className='center'>
-                  
-                  
-                  
-                </div>
+              
                 
                 <Button className='button' type="button" onClick={this.submitData}>Submit</Button>
                 <img src='./2338logo.png' className='logo'></img>
