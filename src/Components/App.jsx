@@ -8,29 +8,31 @@ class App extends React.Component{
     super(props);
     this.state = {
       page: true,
-      teamNumber: "9999",
+      teamNumber: "",
       eventCode: "",
-      secretCode: ""
+      secretCode: "",
+      scoutingTeamNumber: ""
     }
   }
 
   // landing page = true; data page = false
-  changePage = (event, teamNumber, eventCode, secretCode)=>{
+  changePage = (event, teamNumber, eventCode, secretCode, scoutingTeamNumber)=>{
     this.setState({
       page: false,
       teamNumber: teamNumber,
       eventCode: eventCode,
-      secretCode: secretCode
+      secretCode: secretCode,
+      scoutingTeamNumber: scoutingTeamNumber
     });
   }
 
   render(){
     let page;
-    if (this.state.page ){
+    if (this.state.page){
       page = <LandingPage parentCallback = {this.changePage}/>;
     }
     else{
-      page = <DataCollectionPage teamNumber={this.state.teamNumber} eventCode={this.state.eventCode} secretCode={this.state.secretCode}/>;
+      page = <DataCollectionPage teamNumber={this.state.teamNumber} eventCode={this.state.eventCode} secretCode={this.state.secretCode} scoutingTeamNumber={this.state.scoutingTeamNumber}/>;
     }
     
     return(
