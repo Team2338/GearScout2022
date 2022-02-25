@@ -182,13 +182,13 @@ class DataCollectionPage extends React.Component{
                     </div>
                     <div>{this.state.autoHighCount}</div>
                   </div>
-                  <div className='plus-minus-margin'>
+                  {/* <div className='plus-minus-margin'>
                     <Button name="teleopMissCount" className='plus-minus-button' variant="contained" type="button" onClick={this.subtractCount}>-</Button>
                     <Button name="teleopMissCount" className='plus-minus-button' variant="contained" type="button" onClick={this.addCount}>+</Button>
-                  </div>
+                  </div> */}
                 </div>
       
-                <h4>Hanger</h4>
+                {/* <h4>Hanger</h4>
                 <div className='center'>
                   <div className='outline-box'>Hanger</div>
                 </div>
@@ -209,7 +209,7 @@ class DataCollectionPage extends React.Component{
                     <div className='plus-minus-margin'>
                       <Button className='plus-minus-button' type="button" variant="contained" onClick={this.traversalClimb}>Traversal </Button>
                     </div>
-                  </div>
+                  </div> */}
                   <div className='outline-box'>
                     <h3>Miss</h3>
                     <div className='plus-minus-margin'>
@@ -218,9 +218,7 @@ class DataCollectionPage extends React.Component{
                     </div>
                     <div>{this.state.autoMissCount}</div>
                   </div>
-                </div>
-             
-                <h3>Teleop</h3>
+                  <h3>Teleop</h3>
                 <div className='center'>
                   <div className='outline-box'>
                     <h3>Defence</h3>
@@ -278,19 +276,21 @@ class DataCollectionPage extends React.Component{
                     <div className="center">
                     <div className='plus-minus-margin'>
                       <Button className='plus-minus-button' type="button" variant="contained" onClick={this.highClimb} onClick={this.climbHigh}>High</Button>
-                    </div>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.traversalClimb} onClick={this.climbTraversal}>Traversal </Button>
-                    </div>
-                    </div>
+                      </div>
+                      <div className='plus-minus-margin'>
+                        <Button className='plus-minus-button' type="button" variant="contained" onClick={this.traversalClimb} onClick={this.climbTraversal}>Traversal </Button>
+                      </div>
+                      </div>
 
-                    <div>{this.state.climbLevel}</div>
+                      <div>{this.state.climbLevel}</div>
+                    </div>
                   </div>
+                  <Button className='button' type="button" onClick={this.submitData}>Submit</Button>
+                  <img src='./2338logo.png' className='logo'></img>
                 </div>
-                <Button className='button' type="button" onClick={this.submitData}>Submit</Button>
-                <img src='./2338logo.png' className='logo'></img>
               </div>
-            </div>
+             
+                
             
           )    }
 }
