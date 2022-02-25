@@ -22,7 +22,8 @@ class DataCollectionPage extends React.Component{
       redCard: 0,
       disable: false,
       disqualify: false,
-      scoutingTeamNumber: ""
+      scoutingTeamNumber: "",
+      matchNumber: ""
     }
   }
 
@@ -52,76 +53,36 @@ class DataCollectionPage extends React.Component{
     })
   }
 
-  climbNone = (event)=>{
-    if (this.state.climbState = 1) {
-      this.setState({
-        climbLevel: "none"
-      })
-    }
-  }
-
-  climbLow = (event)=>{
-    if (this.state.climbState = 2) {
-      this.setState({
-        climbLevel: "low"
-      })
-    }
-  }
-    
-  climbMid = (event)=>{
-    if (this.state.climbState = 3) {
-      this.setState({
-        climbLevel: "mid"
-      })
-    }
-  }
-
-  climbHigh = (event)=>{
-    if (this.state.climbState = 4) {
-      this.setState({
-        climbLevel: "high"
-      })
-    }
-  }
-  
-  climbTraversal = (event)=>{
-    if (this.state.climbState = 5) {
-      this.setState({
-        climbLevel: "traversal"
-      })
-    }
-  }
-
   noClimb = (event)=>{
     this.setState({
-      climbState: 1
+      climbState: 0
     })
   }
 
   lowClimb = (event)=>{
     this.setState({
-      climbState: 2
+      climbState: 4
     })
   }
 
   midClimb = (event)=>{
     this.setState({
-      climbState: 3
+      climbState: 6
     })
   }
 
   highClimb = (event)=>{
     this.setState({
-      climbState: 4
+      climbState: 10
     })
   }
 
   traversalClimb = (event)=>{
     this.setState({
-      climbState: 5
+      climbState: 15
     })
   }
-
+  
   addDisable = (event)=>{
     this.setState({
       disable: true
@@ -135,12 +96,14 @@ class DataCollectionPage extends React.Component{
     })
   }
   
-  handleTextBox = (event) => {
-    this.props.parentCallback(event, this.state.scoutingTeamNumber);
-  };
+  handleTextBox = (event)=>{
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
 
   submitData = ()=>{
-    const url = "/team/" + this.props.scoutingTeamNumber;
+    const url = "/team/" + this.props.teamNumber;
     const config = {
       headers: {
         secretCode: this.props.secretCode
@@ -148,9 +111,9 @@ class DataCollectionPage extends React.Component{
     }
     const body = {
       eventCode: this.props.eventCode,
-      matchNumber: 1,
-      robotNumber: 1,
-      creator: "abcd",
+      matchNumber: this.state.matchNumber,
+      robotNumber: this.state.scoutingTeamNumber,
+      creator: this.props.scouterName,
       objectives:[
         // {
         //   gamemode: "Auto",
@@ -238,7 +201,8 @@ class DataCollectionPage extends React.Component{
               <div className="wrapper">
                 <h2 className='subtitle-2' onChange={this.handleTextBox}>Scouting App</h2>
                 <div className='button'></div>
-                <input className='text-box' type='Text'placeholder='Team Number: '></input>
+                <input name="scoutingTeamNumber" className='text-box' type='Text' value={this.state.scoutingTeamNumber}onChange={this.handleTextBox} placeholder='Team Number: '></input>
+                <input name="matchNumber" className='text-box' type='Text' value={this.state.matchNumber}onChange={this.handleTextBox} placeholder='Match Number: '></input>
                 
                 <h3>Auto</h3>
                 <div className='center'>
@@ -307,23 +271,23 @@ class DataCollectionPage extends React.Component{
                   <div className='outline-box'>Hanger</div>
                 </div>
                 <div className='center'>
-                  <div>{this.state.climbLevel}</div>
+                  <div>{this.state.climbState}</div>
                 </div>
                 <div className='center'>
                   <div className='plus-minus-margin'>
-                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.noClimb} onClick={this.climbNone}>none</Button>
+                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.noClimb}>none</Button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.lowClimb} onClick={this.climbLow}>Low</Button>
+                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.lowClimb}>Low</Button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.midClimb} onClick={this.climbMid}>Mid</Button>
+                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.midClimb}>Mid</Button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.highClimb} onClick={this.climbHigh}>High</Button>
+                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.highClimb}>High</Button>
                   </div>
                   <div className='plus-minus-margin'>
-                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.traversalClimb} onClick={this.climbTraversal}>Traversal </Button>
+                    <Button className='plus-minus-button' type="button" variant="contained" onClick={this.traversalClimb}>Traversal </Button>
                   </div>
                 </div>
 
