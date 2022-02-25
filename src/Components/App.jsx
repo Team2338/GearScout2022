@@ -11,18 +11,18 @@ class App extends React.Component{
       teamNumber: "",
       eventCode: "",
       secretCode: "",
-      scoutingTeamNumber: ""
+      scouterName: ""
     }
   }
 
   // landing page = true; data page = false
-  changePage = (event, teamNumber, eventCode, secretCode, scoutingTeamNumber)=>{
+  changePage = (event, teamNumber, eventCode, secretCode, scouterName)=>{
     this.setState({
       page: false,
       teamNumber: teamNumber,
       eventCode: eventCode,
       secretCode: secretCode,
-      scoutingTeamNumber: scoutingTeamNumber
+      scouterName: scouterName
     });
   }
 
@@ -32,7 +32,7 @@ class App extends React.Component{
       page = <LandingPage parentCallback = {this.changePage}/>;
     }
     else{
-      page = <DataCollectionPage teamNumber={this.state.teamNumber} eventCode={this.state.eventCode} secretCode={this.state.secretCode} scoutingTeamNumber={this.state.scoutingTeamNumber}/>;
+      page = <DataCollectionPage teamNumber={this.state.teamNumber} eventCode={this.state.eventCode} secretCode={this.state.secretCode} scouterName={this.state.scouterName}/>;
     }
     
     return(
