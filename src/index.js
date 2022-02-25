@@ -32,7 +32,7 @@ import App from './Components/App';
         disabled: 'rgba(186,191,183,0.5)',
         hint: 'rgba(186,191,183,0.3)',
       },
-      error: {
+      error: { 
         main: '#fe5000',
       },
       success: {
