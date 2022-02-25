@@ -33,7 +33,9 @@ class LandingPage extends React.Component{
         <input name="eventCode" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.eventCode} placeholder='Event Code: '></input>
         <h3>Secret Code: </h3>
         <input name="secretCode" className='text-box' type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder='Secret Code: '></input>
-        <div>*Secret code hint*</div>
+        <div>*Enter team specific password to store data*</div>
+        <div>*This code will be used to view your analytics*</div>
+        <div>*Make sure all scouters from the same team use the same code*</div>
         <Button name="submit" className='button' type="button" variant="contained" size="medium" onClick={this.handleClick}>Submit</Button>
         <img src='./2338logo.png' className='logo'></img>
       </div>
