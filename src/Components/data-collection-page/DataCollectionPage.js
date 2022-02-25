@@ -13,7 +13,6 @@ class DataCollectionPage extends React.Component{
       teleopLowCount: 0,
       teleopHighCount: 0,
       teleopMissCount: 0,
-      teleopDefence: false,
       climbState: 0,
       climbLevel: "none",
       matchNumber: "",
@@ -46,11 +45,7 @@ class DataCollectionPage extends React.Component{
     })
   }
 
-  doesTeleopDefence = (event)=>{
-    this.setState({
-      teleopDefence: true
-    })
-  }
+  
 
   noClimb = (event)=>{
     this.setState({
@@ -220,13 +215,6 @@ class DataCollectionPage extends React.Component{
                   </div>
                   <h3>Teleop</h3>
                 <div className='center'>
-                  <div className='outline-box'>
-                    <h3>Defence</h3>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.doesTeleopDefence}>✓</Button>
-                    </div>
-                    <div>{this.state.teleopDefence.toString()}</div>
-                  </div>
                   <div className='outline-box'>
                     <h3>Low</h3>
                     <div className='plus-minus-margin'>
