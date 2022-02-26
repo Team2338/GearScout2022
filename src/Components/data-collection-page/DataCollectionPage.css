@@ -6,7 +6,7 @@
     color: #babfb7;
     background-color: #02243e;
     font-family: "Segoe UI";
-    width: 400px;
+    width: auto;
     height: 100vh;
     overflow-y: auto;
   }
@@ -44,8 +44,7 @@
   
   .text-box{  
     background-color: #babfb7;
-    margin-left: 700px;
-    margin-right: 700px;
+
   }
   .outline-box{
     outline: 3px solid #babfb7;

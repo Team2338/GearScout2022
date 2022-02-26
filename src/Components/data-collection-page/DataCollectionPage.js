@@ -149,7 +149,6 @@ class DataCollectionPage extends React.Component {
 			<div>
 				<div className="wrapper">
 					<h2 className="subtitle-2" onChange={this.handleTextBox}>Scouting App</h2>
-					<div className="button"></div>
 					<input
 						name="scoutingTeamNumber"
 						className="text-box"
