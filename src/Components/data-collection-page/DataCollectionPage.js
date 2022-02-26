@@ -383,8 +383,8 @@ class DataCollectionPage extends React.Component {
 							<div>{this.state.climbLevel}</div>
 						</div>
 					</div>
-					<Button className="button" type="button" onClick={this.submitData}>Submit</Button>
-					<img src="./2338logo.png" className="logo"></img>
+					<Button className="button" type="button" variant="contained" onClick={this.submitData}>Submit</Button>
+					<img src="/2338logo.png" className="logo"></img>
 				</div>
 			</div>
 
