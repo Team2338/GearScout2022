@@ -1,7 +1,7 @@
 :root{
-    --background: var(--blue2338)
-    --foreground: var(--silver2338)
-    --accent: var(--orange2338)
+    --background: var(--blue2338);
+    --foreground: var(--silver2338);
+    --accent: var(--orange2338);
     --white: #FFFFFF;
     --black: #000000;
     --blue2338: #002338;

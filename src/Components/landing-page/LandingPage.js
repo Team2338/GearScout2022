@@ -1,6 +1,7 @@
 import React from "react";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+
 class LandingPage extends React.Component{
 
   constructor(props){
@@ -28,10 +29,17 @@ class LandingPage extends React.Component{
   }
 
   componentDidMount(){
-    localStorage.getItem('teamNumber');
-    localStorage.getItem('eventCode');
-    localStorage.getItem('secretCode');
-    localStorage.getItem('scouterNme');
+    const teamNumber = localStorage.getItem('teamNumber') ?? "";
+    const eventCode = localStorage.getItem('eventCode') ?? "";
+    const secretCode = localStorage.getItem('secretCode') ?? "";
+    const scouterName = localStorage.getItem('scouterName') ?? "";
+
+    this.setState(({
+      teamNumber: teamNumber,
+      eventCode: eventCode,
+      secretCode: secretCode,
+      scouterName: scouterName
+    }));
   }
 
   render(){
