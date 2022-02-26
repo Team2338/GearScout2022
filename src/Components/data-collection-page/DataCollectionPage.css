@@ -6,7 +6,7 @@
     color: #babfb7;
     background-color: #02243e;
     font-family: "Segoe UI";
-    width: 400px;
+    width: auto;
     height: 100vh;
     overflow-y: auto;
   }
@@ -26,13 +26,11 @@
   
   .center {
     display: flex;
-    margin: auto;
   }
   
   .logo {
     margin: 50px;
-    margin-left: 650px;
-    margin-right: 650px;
+    width: 64px;
   }
   
   .subtitle-2{
@@ -44,8 +42,7 @@
   
   .text-box{  
     background-color: #babfb7;
-    margin-left: 700px;
-    margin-right: 700px;
+
   }
   .outline-box{
     outline: 3px solid #babfb7;
@@ -73,7 +70,7 @@
   .button{
     color: #fe5000;
     background-color: #babfb7;
-    margin-top: 30px;
+    margin-top: 50px !important;
     margin-left: 600px;
     margin-right: 600px;
   }
