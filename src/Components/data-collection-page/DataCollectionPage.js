@@ -101,38 +101,38 @@ class DataCollectionPage extends React.Component {
 			creator: this.props.scouterName,
 			objectives: [
 				{
-					gamemode: "Auto",
-					objective: "Lower Hub",
+					gamemode: "AUTO",
+					objective: "LOW_GOAL_2022",
 					count: this.state.autoLowCount
 				},
 				{
-					gamemode: "Auto",
-					objective: "Upper Hub",
+					gamemode: "AUTO",
+					objective: "HIGH_GOAL_2022",
 					count: this.state.autoHighCount
 				},
 				{
-					gamemode: "Auto",
-					objective: "Missed Cargo",
+					gamemode: "AUTO",
+					objective: "MISS_GOAL_2022",
 					count: this.state.autoMissCount
 				},
 				{
-					gamemode: "Teleop",
-					objective: "Lower Hub",
+					gamemode: "TELEOP",
+					objective: "LOW_GOAL_2022",
 					count: this.state.teleopLowCount
 				},
 				{
-					gamemode: "Teleop",
-					objective: "Upper Hub",
+					gamemode: "TELEOP",
+					objective: "HIGH_GOAL_2022",
 					count: this.state.teleopHighCount
 				},
 				{
-					gamemode: "Teleop",
-					objective: "Missed Cargo",
+					gamemode: "TELEOP",
+					objective: "MISS_GOAL_2022",
 					count: this.state.teleopMissCount
 				},
 				{
-					gamemode: "Teleop",
-					objective: "Hanger",
+					gamemode: "TELEOP",
+					objective: "CLIMB_2022",
 					count: this.state.climbState
 				}
 
