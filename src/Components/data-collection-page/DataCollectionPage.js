@@ -147,6 +147,7 @@ class DataCollectionPage extends React.Component {
 	render() {
 		return (
 			<div>
+				
 				<div className="wrapper">
 					<h2 className="subtitle-2" onChange={this.handleTextBox}>Scouting App</h2>
 					<input

@@ -45,10 +45,18 @@ class LandingPage extends React.Component{
   render(){
     return(
       <div className='wrapper'>
-        <h1 className='main-title' >Gear It Forward 2338</h1>
-        <h2 className='subtitle-1'>Scouting App</h2>
+        <div className='subtitlechange'>
+          <h1 className='main-title' >Gear It Forward 2338</h1>
+          <h2 className='subtitle-1'>Scouting App</h2>
+          <select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language}> 
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="french">Français</option>    
+          </select>
+        </div>
+        
         <h3>Team Number: </h3>
-        <input name="teamNumber" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.teamNumber} placeholder='Team Number: '></input> 
+        <input name="teamNumber" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.teamNumber} placeholder={this.props.translate("YOUR_TEAM_NUMBER")} ></input> 
         {/* <TextField id="standard-basic" name="teamNumber" type='Text'  onChange={this.handleChange} value={this.state.teamNumber} label="Team Number: " variant="standard"/> */}
         <h3>Event Code: </h3>
         <input name="eventCode" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.eventCode} placeholder='Event Code: '></input>

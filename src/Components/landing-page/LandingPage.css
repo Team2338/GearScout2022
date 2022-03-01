@@ -38,7 +38,11 @@
     color: #fe5000;
     font-family: "AmazObitaemOstrov"; 
   }
-  
+  .subtitlechange{
+    display: flex;
+    width: 100%;
+    color: purple;
+  }
   
   .text-box{  
     background-color: #babfb7;
