@@ -47,7 +47,7 @@ class LandingPage extends React.Component{
       <div className='wrapper'>
         <div className='subtitlechange'>
           <h1 className='main-title' >Gear It Forward 2338</h1>
-          <h2 className='subtitle-1'>Scouting App</h2>
+          <h2 className='subtitle-1'>GearScout</h2>
           <select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language}> 
             <option value="english">English</option>
             <option value="spanish">Español</option>

@@ -53,31 +53,36 @@ class DataCollectionPage extends React.Component {
 
 	noClimb = (event) => {
 		this.setState({
-			climbState: 0
+			climbState: 0,
+      climbLevel:"None"
 		});
 	};
 
 	lowClimb = (event) => {
 		this.setState({
-			climbState: 4
+			climbState: 4,
+      climbLevel: "Low"
 		});
 	};
 
 	midClimb = (event) => {
 		this.setState({
-			climbState: 6
+			climbState: 6,
+      climbLevel: "Mid"
 		});
 	};
 
 	highClimb = (event) => {
 		this.setState({
-			climbState: 10
+			climbState: 10,
+      climbLevel: "High"
 		});
 	};
 
 	traversalClimb = (event) => {
 		this.setState({
-			climbState: 15
+			climbState: 15,
+      climbLevel: "Traversal"
 		});
 	};
 
@@ -100,6 +105,11 @@ class DataCollectionPage extends React.Component {
 			robotNumber: this.state.scoutingTeamNumber,
 			creator: this.props.scouterName,
 			objectives: [
+        {
+          gamemode: "AUTO",
+          objective: "MOBILITY_2022",
+          count: this.state.autoTaxi
+        },
 				{
 					gamemode: "AUTO",
 					objective: "LOW_GOAL_2022",
@@ -149,7 +159,7 @@ class DataCollectionPage extends React.Component {
 			<div>
 				
 				<div className="wrapper">
-					<h2 className="subtitle-2" onChange={this.handleTextBox}>Scouting App</h2>
+					<h2 className="subtitle-2" onChange={this.handleTextBox}>GearScout</h2>
 					<input
 						name="scoutingTeamNumber"
 						className="text-box"
@@ -223,34 +233,8 @@ class DataCollectionPage extends React.Component {
 							</div>
 							<div>{this.state.autoHighCount}</div>
 						</div>
-						{/* <div className='plus-minus-margin'>
-                    <Button name="teleopMissCount" className='plus-minus-button' variant="contained" type="button" onClick={this.subtractCount}>-</Button>
-                    <Button name="teleopMissCount" className='plus-minus-button' variant="contained" type="button" onClick={this.addCount}>+</Button>
-                  </div> */}
 					</div>
 
-					{/* <h4>Hanger</h4>
-                <div className='center'>
-                  <div className='outline-box'>Hanger</div>
-                </div>
-                <div className='center'>
-                  <div>{this.state.climbState}</div>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.noClimb}>none</Button>
-                    </div>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.lowClimb}>Low</Button>
-                    </div>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.midClimb}>Mid</Button>
-                    </div>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.highClimb}>High</Button>
-                    </div>
-                    <div className='plus-minus-margin'>
-                      <Button className='plus-minus-button' type="button" variant="contained" onClick={this.traversalClimb}>Traversal </Button>
-                    </div>
-                  </div> */}
 					<div className="outline-box">
 						<h3>Miss</h3>
 						<div className="plus-minus-margin">
@@ -339,24 +323,21 @@ class DataCollectionPage extends React.Component {
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.noClimb}
-										onClick={this.climbNone}>none</Button>
+										onClick={this.noClimb}>none</Button>
 								</div>
 								<div className="plus-minus-margin">
 									<Button
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.lowClimb}
-										onClick={this.climbLow}>Low</Button>
+										onClick={this.lowClimb}>Low</Button>
 								</div>
 								<div className="plus-minus-margin">
 									<Button
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.midClimb}
-										onClick={this.climbMid}>Mid</Button>
+										onClick={this.midClimb}>Mid</Button>
 								</div>
 							</div>
 
@@ -368,16 +349,14 @@ class DataCollectionPage extends React.Component {
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.highClimb}
-										onClick={this.climbHigh}>High</Button>
+										onClick={this.highClimb}>High</Button>
 								</div>
 								<div className="plus-minus-margin">
 									<Button
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.traversalClimb}
-										onClick={this.climbTraversal}>Traversal </Button>
+										onClick={this.traversalClimb}>Traversal </Button>
 								</div>
 							</div>
 
