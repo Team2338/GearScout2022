@@ -81,6 +81,11 @@ const languages = {
 		"LOW_GOAL_2022": "Low Goal",
 		"MISS_GOAL_2022": "Missed Shot",
 		"MOBILITY_2022": "Taxi",
+		"SCOUTER_NAME": "Scouter",
+		"SECRET_CODE_HELPER_1": "Enter team specific password to store data",
+		"SECRET_CODE_HELPER_2": "This code will be used to view your analytics",
+		"SECRET_CODE_HELPER_3": "Make sure all scouters from the same team use the same code",
+		"SUBMIT_1": "Submit",
 	},
 	spanish:{
 		"YOUR_TEAM_NUMBER": "Tu numero de equipo",
@@ -94,6 +99,13 @@ const languages = {
 		"LOW_GOAL_2022": "Núcleo Inferior",
 		"MISS_GOAL_2022": "Tiro fallado",
 		"MOBILITY_2022": "Desplazamiento",
+		"SCOUTER_NAME": "Nombre de explorador",
+		"SECRET_CODE_HELPER_1": "Ingrese una contraseña específica del equipo para almacenar datos",
+		"SECRET_CODE_HELPER_2": "Este código se utilizará para ver sus análisis",
+		"SECRET_CODE_HELPER_3": "Asegúrate de que todos los exploradores del mismo equipo usen el mismo código",
+		"SUBMIT_1": "Entregar",
+
+		
 
 
 
@@ -110,6 +122,11 @@ const languages = {
 		"LOW_GOAL_2022": "Centre de Tri Inférieur",
 		"MISS_GOAL_2022": "Coup raté",
 		"MOBILITY_2022": "Circulation",
+		"SCOUTER_NAME": "	Éclaireur",
+		"SECRET_CODE_HELPER_1": "Entrez un mot de passe spécifique à l'équipe pour stocker les données",
+		"SECRET_CODE_HELPER_2": "Ce code sera utilisé pour afficher vos analyses",
+		"SECRET_CODE_HELPER_3": "Assurez-vous que tous les recruteurs d'une même équipe utilisent le même code",
+		"SUBMIT_1": "Nous faire parvenir",
 
 	}
 }
