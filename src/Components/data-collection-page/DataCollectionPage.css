@@ -6,13 +6,13 @@
     color: #babfb7;
     background-color: #02243e;
     font-family: "Segoe UI";
-    width: 400px;
+    width: auto;
     height: 100vh;
     overflow-y: auto;
   }
   
   .main-title{
-    margin: 20px;
+    margin-bottom: 20px;
     color: #fe5000;
     font-family: "AmazObitaemOstrov"; 
   }
@@ -31,8 +31,7 @@
   
   .logo {
     margin: 50px;
-    margin-left: 650px;
-    margin-right: 650px;
+    width: 64px;
   }
   
   .subtitle-2{
@@ -43,9 +42,8 @@
   
   .text-box{  
     background-color: #babfb7;
-    margin-left: 700px;
-    margin-right: 700px;
   }
+
   .outline-box{
     outline: 3px solid #babfb7;
     margin: 10px;
@@ -68,11 +66,17 @@
     flex-direction: row;
   }
   
+  .subtitlechange{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   
   .button{
     color: #fe5000;
     background-color: #babfb7;
-    margin-top: 30px;
+    margin-top: 50px !important;
     margin-left: 600px;
     margin-right: 600px;
   }
