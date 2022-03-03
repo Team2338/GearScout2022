@@ -160,6 +160,7 @@ class DataCollectionPage extends React.Component {
 				
 				<div className="wrapper">
 					<h2 className="subtitle-2" onChange={this.handleTextBox}>GearScout</h2>
+          <a className="space" href="https://data.gearitforward.com/">Analytics</a>
 					<input
 						name="scoutingTeamNumber"
 						className="text-box"
