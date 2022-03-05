@@ -40,7 +40,7 @@ class DataCollectionPage extends React.Component {
 
 	doesAutoTaxi = (event) => {
 		this.setState({
-			autoTaxi: 5
+			autoTaxi: 2
 		});
 	};
 
