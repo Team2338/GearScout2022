@@ -15,7 +15,12 @@ class App extends React.Component {
 			language:"english",
 		};
 	}
-
+  componentDidMount(){
+    const language = localStorage.getItem('language') ?? "english";
+		this.setState(({
+      language: language,
+		}))
+	}
 	// landing page = true; data page = false
 	changePage = (event, teamNumber, eventCode, secretCode, scouterName) => {
 		this.setState({
@@ -29,6 +34,7 @@ class App extends React.Component {
 
 	changeLanguage = (event) => {
 		console.log(event.target.value)
+		localStorage.setItem("language",event.target.value,)
 		this.setState({
 			language: event.target.value,
 		});
