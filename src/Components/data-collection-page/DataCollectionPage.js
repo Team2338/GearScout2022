@@ -54,9 +54,9 @@ class DataCollectionPage extends React.Component {
 	noClimb = (event) => {
 		this.setState({
 			climbState: 0,
-      climbLevel:"None"
+      climbLevel:"NONE"
 		});
-	};
+	}
 
 	lowClimb = (event) => {
 		this.setState({
@@ -167,19 +167,19 @@ class DataCollectionPage extends React.Component {
 						type="Text"
 						value={this.state.scoutingTeamNumber}
 						onChange={this.handleTextBox}
-						placeholder="Team Number: "></input>
+						placeholder={this.props.translate("TEAM_NUMBER")}></input>
 					<input
-						name="matchNumber"
+						name="matchNumber" 
 						className="text-box"
 						type="Text"
 						value={this.state.matchNumber}
 						onChange={this.handleTextBox}
-						placeholder="Match Number: "></input>
+						placeholder={this.props.translate("MATCH_NUMBER")}></input>
 
-					<h3>Auto</h3>
+					<h3>{this.props.translate("AUTO")}</h3>
 					<div className="center">
 						<div className="outline-box">
-							<h3>Taxi</h3>
+							<h3>{this.props.translate("MOBILITY_2022")}</h3>
 							<div className="plus-minus-margin">
 								<Button
 									className="plus-minus-button"
@@ -196,7 +196,7 @@ class DataCollectionPage extends React.Component {
 
 						</div>
 						<div className="outline-box">
-							<h3>Low</h3>
+							<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
 							<div className="plus-minus-margin">
 								<Button
 									name="autoLowCount"
@@ -217,7 +217,7 @@ class DataCollectionPage extends React.Component {
 
 					<div className="center">
 						<div className="outline-box">
-							<h3>High</h3>
+							<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
 							<div className="plus-minus-margin">
 								<Button
 									name="autoHighCount"
@@ -237,7 +237,7 @@ class DataCollectionPage extends React.Component {
 					</div>
 
 					<div className="outline-box">
-						<h3>Miss</h3>
+						<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
 						<div className="plus-minus-margin">
 							<Button
 								name="autoMissCount"
@@ -254,10 +254,10 @@ class DataCollectionPage extends React.Component {
 						</div>
 						<div>{this.state.autoMissCount}</div>
 					</div>
-					<h3>Teleop</h3>
+					<h3>{this.props.translate("TELEOP")}</h3>
 					<div className="center">
 						<div className="outline-box">
-							<h3>Low</h3>
+							<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
 							<div className="plus-minus-margin">
 								<Button
 									name="teleopLowCount"
@@ -278,7 +278,7 @@ class DataCollectionPage extends React.Component {
 
 					<div className="center">
 						<div className="outline-box">
-							<h3>High</h3>
+							<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
 							<div className="plus-minus-margin">
 								<Button
 									name="teleopHighCount"
@@ -296,7 +296,7 @@ class DataCollectionPage extends React.Component {
 							<div>{this.state.teleopHighCount}</div>
 						</div>
 						<div className="outline-box">
-							<h3>Miss</h3>
+							<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
 							<div className="plus-minus-margin">
 								<Button
 									name="teleopMissCount"
@@ -317,28 +317,28 @@ class DataCollectionPage extends React.Component {
 
 					<div className="center">
 						<div className="outline-box">
-							<h3>Hanger</h3>
+							<h3>{this.props.translate("CLIMB_2022")}</h3>
 							<div className="center">
 								<div className="plus-minus-margin">
 									<Button
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.noClimb}>none</Button>
+										onClick={this.noClimb}>{this.props.translate("NONE")}</Button>
 								</div>
 								<div className="plus-minus-margin">
 									<Button
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.lowClimb}>Low</Button>
+										onClick={this.lowClimb}>{this.props.translate("LOW")}</Button>
 								</div>
 								<div className="plus-minus-margin">
 									<Button
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.midClimb}>Mid</Button>
+										onClick={this.midClimb}>{this.props.translate("MID")}</Button>
 								</div>
 							</div>
 
@@ -350,21 +350,21 @@ class DataCollectionPage extends React.Component {
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.highClimb}>High</Button>
+										onClick={this.highClimb}>{this.props.translate("HIGH")}</Button>
 								</div>
 								<div className="plus-minus-margin">
 									<Button
 										className="plus-minus-button"
 										type="button"
 										variant="contained"
-										onClick={this.traversalClimb}>Traversal </Button>
+										onClick={this.traversalClimb}>{this.props.translate("TRAVERSAL")}</Button>
 								</div>
 							</div>
 
-							<div>{this.state.climbLevel}</div>
+							<div>{this.props.translate(this.state.climbLevel)}</div>
 						</div>
 					</div>
-					<Button className="button" type="button" variant="contained" onClick={this.submitData}>Submit</Button>
+					<Button className="button" type="button" variant="contained" onClick={this.submitData}>{this.props.translate("SUBMIT_1")}</Button>
 					<img src="/2338logo.png" className="logo"></img>
 				</div>
 			</div>
