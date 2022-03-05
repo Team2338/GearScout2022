@@ -93,6 +93,7 @@ class DataCollectionPage extends React.Component {
 	};
 
 	submitData = () => {
+		alert("Data Submited!")
 		const url = "/team/" + this.props.teamNumber;
 		const config = {
 			headers: {

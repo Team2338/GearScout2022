@@ -55,20 +55,20 @@ class LandingPage extends React.Component{
           </select>
         </div>
         
-        <h3>{this.props.translate("TEAM_NUMBER")}: </h3>
+        <h3>Team Number: </h3>
         <input name="teamNumber" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.teamNumber} placeholder={this.props.translate("YOUR_TEAM_NUMBER")} ></input> 
         {/* <TextField id="standard-basic" name="teamNumber" type='Text'  onChange={this.handleChange} value={this.state.teamNumber} label="Team Number: " variant="standard"/> */}
-        <h3>{this.props.translate("EVENT_CODE")}: </h3>
-        <input name="eventCode" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.eventCode} placeholder={this.props.translate("EVENT_CODE")}></input>
+        <h3>Event Code: </h3>
+        <input name="eventCode" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.eventCode} placeholder='Event Code: '></input>
         {/* <TextField id="standard-basic" name="eventCode" type='Text'  onChange={this.handleChange} value={this.state.eventCode} label="Event Code: " variant="standard" /> */}
-        <h3>{this.props.translate("SCOUTER_NAME")}: </h3>
-        <input name="scouterName" className='text-box' type='Text' onChange={this.handleChange} value={this.state.scouterName} placeholder={this.props.translate("SCOUTER_NAME")}></input>
-        <h3>{this.props.translate("SECRET_CODE")}: </h3>
-        <input name="secretCode" className='text-box' type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder={this.props.translate("SECRET_CODE")}></input>
-        <div>*{this.props.translate("SECRET_CODE_HELPER_1")}*</div>
-        <div>*{this.props.translate("SECRET_CODE_HELPER_2")}*</div>
-        <div>*{this.props.translate("SECRET_CODE_HELPER_3")}*</div>
-        <Button name="submit" className='button' type="button" variant="contained" size="medium" onClick={this.handleClick} >{this.props.translate("SUBMIT_1")}</Button>
+        <h3>Scouter Name: </h3>
+        <input name="scouterName" className='text-box' type='Text' onChange={this.handleChange} value={this.state.scouterName} placeholder='Scouter Name: '></input>
+        <h3>Secret Code: </h3>
+        <input name="secretCode" className='text-box' type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder='Secret Code: '></input>
+        <div>*Enter team specific password to store data*</div>
+        <div>*This code will be used to view your analytics*</div>
+        <div>*Make sure all scouters from the same team use the same code*</div>
+        <Button name="submit" className='button' type="button" variant="contained" size="medium" onClick={this.handleClick}>Submit</Button>
         <img src='./2338logo.png' className='logo'></img>
       </div>
     )
