@@ -61,28 +61,28 @@ class DataCollectionPage extends React.Component {
 	lowClimb = (event) => {
 		this.setState({
 			climbState: 4,
-      climbLevel: "Low"
+      climbLevel: "LOW"
 		});
 	};
 
 	midClimb = (event) => {
 		this.setState({
 			climbState: 6,
-      climbLevel: "Mid"
+      climbLevel: "MID"
 		});
 	};
 
 	highClimb = (event) => {
 		this.setState({
 			climbState: 10,
-      climbLevel: "High"
+      climbLevel: "HIGH"
 		});
 	};
 
 	traversalClimb = (event) => {
 		this.setState({
 			climbState: 15,
-      climbLevel: "Traversal"
+      climbLevel: "TRAVERSAL"
 		});
 	};
 
