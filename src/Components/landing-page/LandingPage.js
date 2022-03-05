@@ -68,6 +68,7 @@ class LandingPage extends React.Component{
         <div>*{this.props.translate("SECRET_CODE_HELPER_1")}*</div>
         <div>*{this.props.translate("SECRET_CODE_HELPER_2")}*</div>
         <div>*{this.props.translate("SECRET_CODE_HELPER_3")}*</div>
+        <Button name="submit" className='button' type="button" variant="contained" size="medium" onClick={this.handleClick} >{this.props.translate("SUBMIT_1")}</Button>
         <img src='./2338logo.png' className='logo'></img>
       </div>
     )
