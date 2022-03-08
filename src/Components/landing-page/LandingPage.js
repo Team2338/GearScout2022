@@ -44,7 +44,7 @@ class LandingPage extends React.Component{
       teamNumber: teamNumber,
       eventCode: eventCode,
       secretCode: secretCode,
-      scouterName: scouterName
+      scouterName: scouterName,
     }));
   }
 
