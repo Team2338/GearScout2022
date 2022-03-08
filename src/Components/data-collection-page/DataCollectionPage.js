@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import TextField from '@mui/material/TextField';
 import "./DataCollectionPage.css";
 import GearscoutService from "../../Services/GearscoutService";
 
@@ -162,20 +163,25 @@ class DataCollectionPage extends React.Component {
 				<div className="wrapper">
 					<h2 className="subtitle-2" onChange={this.handleTextBox}>GearScout</h2>
           <a className="space" href="https://data.gearitforward.com/">Analytics</a>
-					<input
+					<TextField
+						id="outlined-basic" 
+						label={this.props.translate("TEAM_NUMBER")}
+						variant="outlined"
 						name="scoutingTeamNumber"
-						className="text-box"
 						type="Text"
 						value={this.state.scoutingTeamNumber}
 						onChange={this.handleTextBox}
-						placeholder={this.props.translate("TEAM_NUMBER")}></input>
-					<input
+						placeholder={this.props.translate("TEAM_NUMBER")}
+						className="data_form"></TextField>
+					<TextField
+						id="outlined-basic" 
+						label={this.props.translate("MATCH_NUMBER")}
+						variant="outlined"
 						name="matchNumber" 
-						className="text-box"
 						type="Text"
 						value={this.state.matchNumber}
 						onChange={this.handleTextBox}
-						placeholder={this.props.translate("MATCH_NUMBER")}></input>
+						placeholder={this.props.translate("MATCH_NUMBER")}></TextField>
 
 					<h3>{this.props.translate("AUTO")}</h3>
 					<div className="center">

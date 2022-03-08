@@ -9,7 +9,7 @@
   }
   
   .main-title{
-    margin: 20px;
+    /* margin: 20px; */
     color: #fe5000;
     font-family: "AmazObitaemOstrov"; 
   }
@@ -40,8 +40,10 @@
   }
   .subtitlechange{
     display: flex;
-    width: 100%;
+    width: 80%;
     color: purple;
+    padding-left: 1rem;
+    margin-top: 12px;
   }
   
   .text-box{  
@@ -71,4 +73,19 @@
     margin-top: 30px;
     margin-left: 600px;
     margin-right: 600px;
+  }
+
+  .landingpage-forms{
+    margin-bottom: 1rem!important;
+  }
+  #outlined-basic{
+    min-width: 18rem!important;
+  }
+
+  .landingpage-logo{
+    height: 9rem;
+  }
+
+  .lang-width{
+    min-width: 180px!important;
   }

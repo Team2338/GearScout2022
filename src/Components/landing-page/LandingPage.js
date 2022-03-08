@@ -1,6 +1,12 @@
 import React from "react";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
+import './LandingPage.css';
 
 class LandingPage extends React.Component{
 
@@ -46,30 +52,45 @@ class LandingPage extends React.Component{
     return(
       <div className='wrapper'>
         <div className='subtitlechange'>
-          <h1 className='main-title' >Gear It Forward 2338</h1>
+          <img src='./2338logo.png' className="landingpage-logo"></img>
+          <h1 className='main-title'>Gear It Forward 2338</h1>
+
           <h2 className='subtitle-1'>GearScout</h2>
-          <select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language}> 
-            <option value="english">English</option>
-            <option value="spanish">Español</option>
-            <option value="french">Français</option>    
-          </select>
+          <FormControl>
+            <Select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language}> 
+              <MenuItem value="english">English</MenuItem>
+              <MenuItem value="spanish">Español</MenuItem>
+              <MenuItem value="french">Français</MenuItem>    
+            </Select>
+          </FormControl>
+
         </div>
         
-        <h3>{this.props.translate("TEAM_NUMBER")}: </h3>
-        <input name="teamNumber" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.teamNumber} placeholder={this.props.translate("YOUR_TEAM_NUMBER")} ></input> 
-        {/* <TextField id="standard-basic" name="teamNumber" type='Text'  onChange={this.handleChange} value={this.state.teamNumber} label="Team Number: " variant="standard"/> */}
-        <h3>{this.props.translate("EVENT_CODE")}: </h3>
-        <input name="eventCode" className='text-box' type='Text'  onChange={this.handleChange} value={this.state.eventCode} placeholder={this.props.translate("EVENT_CODE")}></input>
-        {/* <TextField id="standard-basic" name="eventCode" type='Text'  onChange={this.handleChange} value={this.state.eventCode} label="Event Code: " variant="standard" /> */}
-        <h3>{this.props.translate("SCOUTER_NAME")}: </h3>
-        <input name="scouterName" className='text-box' type='Text' onChange={this.handleChange} value={this.state.scouterName} placeholder={this.props.translate("SCOUTER_NAME")}></input>
-        <h3>{this.props.translate("SECRET_CODE")}: </h3>
-        <input name="secretCode" className='text-box' type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder={this.props.translate("SECRET_CODE")}></input>
+        <div className="landingpage-forms">
+          {/* <h3>{this.props.translate("TEAM_NUMBER")}: </h3> */}
+          <TextField name="teamNumber" id="outlined-basic" label={this.props.translate("YOUR_TEAM_NUMBER")} variant="outlined" type='Text'  onChange={this.handleChange} value={this.state.teamNumber} placeholder={this.props.translate("YOUR_TEAM_NUMBER")} /> 
+        </div>
+
+        <div className="landingpage-forms">
+          {/* <h3>{this.props.translate("EVENT_CODE")}: </h3> */}
+          <TextField name="eventCode" id="outlined-basic" label={this.props.translate("EVENT_CODE")} variant="outlined" type='Text' onChange={this.handleChange} value={this.state.eventCode} placeholder={this.props.translate("EVENT_CODE")}/>
+        </div>
+
+        <div className="landingpage-forms">
+          {/* <h3>{this.props.translate("SCOUTER_NAME")}: </h3> */}
+          <TextField name="scouterName" id="outlined-basic" label={this.props.translate("SCOUTER_NAME")} variant="outlined" type='Text' onChange={this.handleChange} value={this.state.scouterName} placeholder={this.props.translate("SCOUTER_NAME")}/>
+        </div>
+
+        <div className="landingpage-forms">
+          {/* <h3>{this.props.translate("SECRET_CODE")}: </h3> */}
+          <TextField name="secretCode" id="outlined-basic" label={this.props.translate("SECRET_CODE")} variant="outlined" type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder={this.props.translate("SECRET_CODE")}/>
+        </div>
+
         <div>*{this.props.translate("SECRET_CODE_HELPER_1")}*</div>
         <div>*{this.props.translate("SECRET_CODE_HELPER_2")}*</div>
         <div>*{this.props.translate("SECRET_CODE_HELPER_3")}*</div>
         <Button name="submit" className='button' type="button" variant="contained" size="medium" onClick={this.handleClick} >{this.props.translate("SUBMIT_1")}</Button>
-        <img src='./2338logo.png' className='logo'></img>
+
       </div>
     )
   }
