@@ -38,7 +38,7 @@ class LandingPage extends React.Component{
       teamNumber: teamNumber,
       eventCode: eventCode,
       secretCode: secretCode,
-      scouterName: scouterName
+      scouterName: scouterName,
     }));
   }
 
@@ -52,6 +52,7 @@ class LandingPage extends React.Component{
             <option value="english">English</option>
             <option value="spanish">Español</option>
             <option value="french">Français</option>    
+            <option value="hindi">हिन्दी</option>
           </select>
         </div>
         
