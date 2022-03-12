@@ -3,9 +3,7 @@
     flex-direction: column;
     text-align: center;
     color: #babfb7;
-    background-color: #02243e;
     font-family: "Segoe UI";
-    
   }
   
   .main-title{
@@ -38,13 +36,62 @@
     color: #fe5000;
     font-family: "AmazObitaemOstrov"; 
   }
+
   .subtitlechange{
+    background-color: #02243e;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 98.8%;
+  }
+
+  .subtitlechange .wrappers{
     display: flex;
-    width: 80%;
+  }
+
+  .subtitlechange .wrappers .right{
+    margin-top: 50px;
+    margin-left: 32rem;
+  }
+  .subtitlechange .wrappers .center{
+    margin-top: 34px;
+    font-size: 20px;
+    display: block!important;
+    margin-left: 32rem;
+  }
+  .subtitlechange .wrappers .left{
+    margin-left: 2.5rem;
+  }
+  .subtitlechange .wrappers .center .main-title{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .css-8c8mkq-MuiButtonBase-root-MuiMenuItem-root.Mui-selected:focus{
+    background-color: rgba(254, 80, 0, 0.493);
+    transition: .3s;
+  }
+  .css-8c8mkq-MuiButtonBase-root-MuiMenuItem-root:hover{
+    background-color: #babfb78e!important;
+    color:#02243e;
+    transition: .3s;
+  }
+
+  .points-landingpage{
+    color: #02243e;
+  }
+
+  .login-title{
+    color: #02243e;
+  }
+
+  /* .subtitlechange .wrapper{
+    display: flex;
+    width: 100%;
+    height: 97%;
     color: purple;
     padding-left: 1rem;
-    margin-top: 12px;
-  }
+    margin-top: 0;
+    background-color: #02243e;
+  } */
   
   .text-box{  
     background-color: #babfb7;
@@ -66,7 +113,6 @@
     margin-right: 25px;
   }
   
-  
   .button{
     color: #fe5000;
     background-color: #babfb7;
@@ -80,6 +126,21 @@
   }
   #outlined-basic{
     min-width: 18rem!important;
+    color: #02243e;
+  }
+  #outlined-basic1{
+    border-bottom: solid gray;
+    min-width: 18rem!important;
+    background-color: #444a4e2c;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+  }
+  #outlined-basic-label{
+    color:#02243e;
+  }
+
+  #lang{
+    border: solid gray;
   }
 
   .landingpage-logo{
@@ -88,4 +149,18 @@
 
   .lang-width{
     min-width: 180px!important;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .subtitlechange .wrappers .center{
+      margin-left: 5px;
+      font-size: 18px;
+    }
+    .subtitlechange .wrappers .right{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .subtitlechange .wrappers .left{
+      margin-left: 0rem;
+    }
   }

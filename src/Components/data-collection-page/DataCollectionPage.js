@@ -160,13 +160,13 @@ class DataCollectionPage extends React.Component {
 		return (
 			<div>
 				
-				<div className="wrapper">
+				<div className="wrapper-dataCollect">
 					<h2 className="subtitle-2" onChange={this.handleTextBox}>GearScout</h2>
           <a className="space" href="https://data.gearitforward.com/">Analytics</a>
 					<TextField
-						id="outlined-basic" 
+						id="outlined-basic1" 
 						label={this.props.translate("TEAM_NUMBER")}
-						variant="outlined"
+						variant="filled"
 						name="scoutingTeamNumber"
 						type="Text"
 						value={this.state.scoutingTeamNumber}
@@ -174,14 +174,15 @@ class DataCollectionPage extends React.Component {
 						placeholder={this.props.translate("TEAM_NUMBER")}
 						className="data_form"></TextField>
 					<TextField
-						id="outlined-basic" 
+						id="outlined-basic1" 
 						label={this.props.translate("MATCH_NUMBER")}
-						variant="outlined"
+						variant="filled"
 						name="matchNumber" 
 						type="Text"
 						value={this.state.matchNumber}
 						onChange={this.handleTextBox}
-						placeholder={this.props.translate("MATCH_NUMBER")}></TextField>
+						placeholder={this.props.translate("MATCH_NUMBER")}
+						className="data_form"></TextField>
 
 					<h3>{this.props.translate("AUTO")}</h3>
 					<div className="center">

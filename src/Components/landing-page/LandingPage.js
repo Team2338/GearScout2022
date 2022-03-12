@@ -51,44 +51,50 @@ class LandingPage extends React.Component{
   render(){
     return(
       <div className='wrapper'>
-        <div className='subtitlechange'>
-          <img src='./2338logo.png' className="landingpage-logo"></img>
-          <h1 className='main-title'>Gear It Forward 2338</h1>
-
-          <h2 className='subtitle-1'>GearScout</h2>
-          <FormControl>
-            <Select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language}> 
-              <MenuItem value="english">English</MenuItem>
-              <MenuItem value="spanish">Español</MenuItem>
-              <MenuItem value="french">Français</MenuItem>    
-            </Select>
-          </FormControl>
-
-        </div>
+        <nav className='subtitlechange'>
+          <div className="wrappers">
+            <div className="left">
+              <img src='./2338logo.png' className="landingpage-logo"></img>
+            </div>
+            <div className="center">
+              <h1 className='main-title'>Gear It Forward 2338</h1>
+            </div>
+            <div className="right">
+              <FormControl>
+                <Select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language}> 
+                  <MenuItem value="english">English</MenuItem>
+                  <MenuItem value="spanish">Español</MenuItem>
+                  <MenuItem value="french">Français</MenuItem>    
+                </Select>
+              </FormControl>  
+            </div>
+          </div>
+        </nav>
         
+        <h1 className="login-title">Login: </h1>
         <div className="landingpage-forms">
           {/* <h3>{this.props.translate("TEAM_NUMBER")}: </h3> */}
-          <TextField name="teamNumber" id="outlined-basic" label={this.props.translate("YOUR_TEAM_NUMBER")} variant="outlined" type='Text'  onChange={this.handleChange} value={this.state.teamNumber} placeholder={this.props.translate("YOUR_TEAM_NUMBER")} /> 
+          <TextField name="teamNumber" id="outlined-basic" label={this.props.translate("YOUR_TEAM_NUMBER")} variant="filled" type='Text'  onChange={this.handleChange} value={this.state.teamNumber} /> 
         </div>
 
         <div className="landingpage-forms">
           {/* <h3>{this.props.translate("EVENT_CODE")}: </h3> */}
-          <TextField name="eventCode" id="outlined-basic" label={this.props.translate("EVENT_CODE")} variant="outlined" type='Text' onChange={this.handleChange} value={this.state.eventCode} placeholder={this.props.translate("EVENT_CODE")}/>
+          <TextField name="eventCode" id="outlined-basic" label={this.props.translate("EVENT_CODE")} variant="filled" type='Text' onChange={this.handleChange} value={this.state.eventCode} placeholder={this.props.translate("EVENT_CODE")}/>
         </div>
 
         <div className="landingpage-forms">
           {/* <h3>{this.props.translate("SCOUTER_NAME")}: </h3> */}
-          <TextField name="scouterName" id="outlined-basic" label={this.props.translate("SCOUTER_NAME")} variant="outlined" type='Text' onChange={this.handleChange} value={this.state.scouterName} placeholder={this.props.translate("SCOUTER_NAME")}/>
+          <TextField name="scouterName" id="outlined-basic" label={this.props.translate("SCOUTER_NAME")} variant="filled" type='Text' onChange={this.handleChange} value={this.state.scouterName} placeholder={this.props.translate("SCOUTER_NAME")}/>
         </div>
 
         <div className="landingpage-forms">
           {/* <h3>{this.props.translate("SECRET_CODE")}: </h3> */}
-          <TextField name="secretCode" id="outlined-basic" label={this.props.translate("SECRET_CODE")} variant="outlined" type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder={this.props.translate("SECRET_CODE")}/>
+          <TextField name="secretCode" id="outlined-basic" label={this.props.translate("SECRET_CODE")} variant="filled" type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder={this.props.translate("SECRET_CODE")}/>
         </div>
 
-        <div>*{this.props.translate("SECRET_CODE_HELPER_1")}*</div>
-        <div>*{this.props.translate("SECRET_CODE_HELPER_2")}*</div>
-        <div>*{this.props.translate("SECRET_CODE_HELPER_3")}*</div>
+        <div className="points-landingpage">*{this.props.translate("SECRET_CODE_HELPER_1")}*</div>
+        <div className="points-landingpage">*{this.props.translate("SECRET_CODE_HELPER_2")}*</div>
+        <div className="points-landingpage">*{this.props.translate("SECRET_CODE_HELPER_3")}*</div>
         <Button name="submit" className='button' type="button" variant="contained" size="medium" onClick={this.handleClick} >{this.props.translate("SUBMIT_1")}</Button>
 
       </div>

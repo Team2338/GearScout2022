@@ -4,12 +4,25 @@
     text-align: center;
     align-items: center;
     color: #babfb7;
-    background-color: #02243e;
+    background-color: white; /*02243e*/
     font-family: "Segoe UI";
     width: auto;
     height: 100vh;
     overflow-y: auto;
   }
+
+.wrapper-dataCollect{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #babfb7;
+    background-color: #02243e; /*02243e*/
+    font-family: "Segoe UI";
+    width: auto;
+    height: 100vh;
+    overflow-y: auto;
+}
   
   .main-title{
     margin-bottom: 20px;
@@ -79,6 +92,10 @@
     margin-top: 50px !important;
     margin-left: 600px;
     margin-right: 600px;
+  }
+
+  .css-6hp17o-MuiList-root-MuiMenu-list{
+    background-color: #02243e;
   }
 
   .space{
