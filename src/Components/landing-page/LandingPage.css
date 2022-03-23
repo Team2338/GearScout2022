@@ -1,9 +1,26 @@
 .wrapper{
+    align-items: center;
+    background-color: white;
+    color: #babfb7;
     display: flex;
     flex-direction: column;
+    font-family: Segoe UI;
+    height: 100vh;
+    overflow-y: auto;
     text-align: center;
-    color: #babfb7;
-    font-family: "Segoe UI";
+    width: auto;
+  }
+
+  .wrapper-dataCollect{
+    align-items: center;
+    background-color: #02243e;
+    display: flex;
+    flex-direction: column;
+    font-family: Segoe UI;
+    height: 100vh;
+    overflow-y: auto;
+    text-align: center;
+    width: auto;
   }
   
   .main-title{
@@ -101,7 +118,9 @@
   .outline-box{
     outline: 3px solid #babfb7;
     margin: 10px;
-    padding: 8px;
+    min-width: 160px;
+    padding-bottom: 10px;
+    text-align: center;
   }
   
   .plus-minus-button{
@@ -110,7 +129,7 @@
   }
   
   .plus-minus-margin{
-    margin-right: 25px;
+    margin-right: -3.9px;
   }
   
   .button{
@@ -162,5 +181,8 @@
     }
     .subtitlechange .wrappers .left{
       margin-left: 0rem;
+    }
+    .wrapper-dataCollect{
+      min-width: 50%!important;
     }
   }

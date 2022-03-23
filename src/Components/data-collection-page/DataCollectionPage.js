@@ -303,6 +303,9 @@ class DataCollectionPage extends React.Component {
 							</div>
 							<div>{this.state.teleopHighCount}</div>
 						</div>
+					</div>
+
+					<div className="center">
 						<div className="outline-box">
 							<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
 							<div className="plus-minus-margin">
@@ -320,7 +323,7 @@ class DataCollectionPage extends React.Component {
 									onClick={this.addCount}>+</Button>
 							</div>
 							<div>{this.state.teleopMissCount}</div>
-						</div>
+						</div>	
 					</div>
 
 					<div className="center">
