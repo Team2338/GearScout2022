@@ -161,6 +161,7 @@ class DataCollectionPage extends React.Component {
 			<div>
 				
 				<div className="wrapper-dataCollect">
+					<img src="/2338logo.png" className="logo"></img>
 					<h2 className="subtitle-2" onChange={this.handleTextBox}>GearScout</h2>
           <a className="space" href="https://data.gearitforward.com/">Analytics</a>
 					<TextField
@@ -201,7 +202,44 @@ class DataCollectionPage extends React.Component {
 									onClick={this.doesAutoTaxi}>✓</Button>
 							</div>
 							<div>{this.state.autoTaxi.toString()}</div>
-
+						</div>
+						<div className="outline-box">
+							<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
+							<div className="plus-minus-margin">
+								<Button
+									name="autoMissCount"
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.subtractCount}>-</Button>
+								<Button
+									name="autoMissCount"
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.addCount}>+</Button>
+							</div>
+							<div>{this.state.autoMissCount}</div>
+						</div>
+					</div>
+					<div className="center">
+						<div className="outline-box">
+							<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
+							<div className="plus-minus-margin">
+								<Button
+									name="autoHighCount"
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.subtractCount}>-</Button>
+								<Button
+									name="autoHighCount"
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.addCount}>+</Button>
+							</div>
+							<div>{this.state.autoHighCount}</div>
 						</div>
 						<div className="outline-box">
 							<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
@@ -222,68 +260,8 @@ class DataCollectionPage extends React.Component {
 							<div>{this.state.autoLowCount}</div>
 						</div>
 					</div>
-
-					<div className="center">
-						<div className="outline-box">
-							<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="autoHighCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="autoHighCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.autoHighCount}</div>
-						</div>
-					</div>
-
-					<div className="outline-box">
-						<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
-						<div className="plus-minus-margin">
-							<Button
-								name="autoMissCount"
-								className="plus-minus-button"
-								type="button"
-								variant="contained"
-								onClick={this.subtractCount}>-</Button>
-							<Button
-								name="autoMissCount"
-								className="plus-minus-button"
-								type="button"
-								variant="contained"
-								onClick={this.addCount}>+</Button>
-						</div>
-						<div>{this.state.autoMissCount}</div>
-					</div>
+					
 					<h3>{this.props.translate("TELEOP")}</h3>
-					<div className="center">
-						<div className="outline-box">
-							<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="teleopLowCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="teleopLowCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.teleopLowCount}</div>
-						</div>
-					</div>
-
 					<div className="center">
 						<div className="outline-box">
 							<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
@@ -302,6 +280,24 @@ class DataCollectionPage extends React.Component {
 									onClick={this.addCount}>+</Button>
 							</div>
 							<div>{this.state.teleopHighCount}</div>
+						</div>
+						<div className="outline-box">
+							<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
+							<div className="plus-minus-margin">
+								<Button
+									name="teleopLowCount"
+									className="plus-minus-button"
+									variant="contained"
+									type="button"
+									onClick={this.subtractCount}>-</Button>
+								<Button
+									name="teleopLowCount"
+									className="plus-minus-button"
+									variant="contained"
+									type="button"
+									onClick={this.addCount}>+</Button>
+							</div>
+							<div>{this.state.teleopLowCount}</div>
 						</div>
 					</div>
 
@@ -376,7 +372,6 @@ class DataCollectionPage extends React.Component {
 						</div>
 					</div>
 					<Button className="button" type="button" variant="contained" onClick={this.submitData}>{this.props.translate("SUBMIT_1")}</Button>
-					<img src="/2338logo.png" className="logo"></img>
 				</div>
 			</div>
 

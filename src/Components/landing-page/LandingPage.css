@@ -43,9 +43,11 @@
   }
   
   .logo {
-    margin: 50px;
     margin-left: 650px;
     margin-right: 650px;
+    margin-bottom: 0rem;
+    width: 5%;
+    margin-top: 9px;
   }
   
   .subtitle-2{
@@ -138,6 +140,8 @@
     margin-top: 30px;
     margin-left: 600px;
     margin-right: 600px;
+    margin-bottom: 3rem!important;
+    width: 18%;
   }
 
   .landingpage-forms{
@@ -184,5 +188,8 @@
     }
     .wrapper-dataCollect{
       min-width: 50%!important;
+    }
+    .button{
+      width: 50%!important;
     }
   }
