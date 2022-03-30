@@ -185,6 +185,7 @@ class DataCollectionPage extends React.Component {
 						className="data_form"></TextField>
 
 					<h3>{this.props.translate("AUTO")}</h3>
+					<h4>{this.props.translate("HP_WARNING")}</h4>
 					<div className="center">
 						<div className="outline-box">
 							<h3>{this.props.translate("MOBILITY_2022")}</h3>
