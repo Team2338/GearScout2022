@@ -161,7 +161,7 @@ class DataCollectionPage extends React.Component {
 			<div className="wrapper-dataCollect">
 				<img src="/2338logo.png" className="logo"/>
 				<h2 className="app-name" onChange={this.handleTextBox}>GearScout</h2>
-        <a className="analytics-link" href="https://data.gearitforward.com/">Analytics</a>
+				<a className="analytics-link" href="https://data.gearitforward.com/">Analytics</a>
 				<TextField
 					id="outlined-basic1"
 					label={this.props.translate("TEAM_NUMBER")}
@@ -186,6 +186,7 @@ class DataCollectionPage extends React.Component {
 				/>
 
 				<h3>{this.props.translate("AUTO")}</h3>
+				<h4>{this.props.translate("HP_WARNING")}</h4>
 				<div className="scores-wrapper">
 					<div className="outline-box">
 						<h3>{this.props.translate("MOBILITY_2022")}</h3>
