@@ -22,6 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# IntelliJ files
+# IntelliJ / VS Code files
 .idea/
 *.iml
+.vscode/
