@@ -1,11 +1,12 @@
-:root{
-    --background: var(--blue2338);
-    --foreground: var(--silver2338);
-    --accent: var(--orange2338);
-    --white: #FFFFFF;
-    --black: #000000;
-    --blue2338: #002338;
-    --orange2338: #ff5500;
-    --silver2338: #bababa;
+:root {
+	--background: var(--blue2338);
+	--foreground: var(--silver2338);
+	--accent: var(--orange2338);
+	--white: #FFFFFF;
+	--black: #000000;
+	--blue2338: #002338;
+	--orange2338: #FF5500;
+	--silver2338: #BABABA;
 
+	font-family: Roboto, Segoe UI, Helvetica, Arial, sans-serif;
 }

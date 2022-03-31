@@ -158,217 +158,207 @@ class DataCollectionPage extends React.Component {
 
 	render() {
 		return (
-			<div>
-				
-				<div className="wrapper-dataCollect">
-					<img src="/2338logo.png" className="logo"></img>
-					<h2 className="subtitle-2" onChange={this.handleTextBox}>GearScout</h2>
-          <a className="space" href="https://data.gearitforward.com/">Analytics</a>
-					<TextField
-						id="outlined-basic1" 
-						label={this.props.translate("TEAM_NUMBER")}
-						variant="filled"
-						name="scoutingTeamNumber"
-						type="Text"
-						value={this.state.scoutingTeamNumber}
-						onChange={this.handleTextBox}
-						placeholder={this.props.translate("TEAM_NUMBER")}
-						className="data_form"
-					/>
-					<TextField
-						id="outlined-basic1" 
-						label={this.props.translate("MATCH_NUMBER")}
-						variant="filled"
-						name="matchNumber" 
-						type="Text"
-						value={this.state.matchNumber}
-						onChange={this.handleTextBox}
-						placeholder={this.props.translate("MATCH_NUMBER")}
-						className="data_form"
-					/>
+			<div className="wrapper-dataCollect">
+				<img src="/2338logo.png" className="logo"/>
+				<h2 className="app-name" onChange={this.handleTextBox}>GearScout</h2>
+        <a className="analytics-link" href="https://data.gearitforward.com/">Analytics</a>
+				<TextField
+					id="outlined-basic1"
+					label={this.props.translate("TEAM_NUMBER")}
+					variant="filled"
+					name="scoutingTeamNumber"
+					type="Text"
+					value={this.state.scoutingTeamNumber}
+					onChange={this.handleTextBox}
+					placeholder={this.props.translate("TEAM_NUMBER")}
+					className="data_form"
+				/>
+				<TextField
+					id="outlined-basic1"
+					label={this.props.translate("MATCH_NUMBER")}
+					variant="filled"
+					name="matchNumber"
+					type="Text"
+					value={this.state.matchNumber}
+					onChange={this.handleTextBox}
+					placeholder={this.props.translate("MATCH_NUMBER")}
+					className="data_form"
+				/>
 
-					<h3>{this.props.translate("AUTO")}</h3>
-					<div className="center">
-						<div className="outline-box">
-							<h3>{this.props.translate("MOBILITY_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.Taxiundobutton}>X</Button>
-								<Button
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.doesAutoTaxi}>✓</Button>
-							</div>
-							<div>{this.state.autoTaxi.toString()}</div>
+				<h3>{this.props.translate("AUTO")}</h3>
+				<div className="scores-wrapper">
+					<div className="outline-box">
+						<h3>{this.props.translate("MOBILITY_2022")}</h3>
+						<div className="plus-minus-margin">
+							<Button
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.Taxiundobutton}>X</Button>
+							<Button
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.doesAutoTaxi}>✓</Button>
 						</div>
-						<div className="outline-box">
-							<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="autoMissCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="autoMissCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.autoMissCount}</div>
-						</div>
+						<div>{this.state.autoTaxi.toString()}</div>
 					</div>
-					<div className="center">
-						<div className="outline-box">
-							<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="autoHighCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="autoHighCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.autoHighCount}</div>
+					<div className="outline-box">
+						<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
+						<div className="plus-minus-margin">
+							<Button
+								name="autoHighCount"
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.subtractCount}>-</Button>
+							<Button
+								name="autoHighCount"
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.addCount}>+</Button>
 						</div>
-						<div className="outline-box">
-							<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="autoLowCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="autoLowCount"
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.autoLowCount}</div>
-						</div>
+						<div>{this.state.autoHighCount}</div>
 					</div>
-					
-					<h3>{this.props.translate("TELEOP")}</h3>
-					<div className="center">
-						<div className="outline-box">
-							<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="teleopHighCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="teleopHighCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.teleopHighCount}</div>
+					<div className="outline-box">
+						<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
+						<div className="plus-minus-margin">
+							<Button
+								name="autoLowCount"
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.subtractCount}>-</Button>
+							<Button
+								name="autoLowCount"
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.addCount}>+</Button>
 						</div>
-						<div className="outline-box">
-							<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="teleopLowCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="teleopLowCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.teleopLowCount}</div>
+						<div>{this.state.autoLowCount}</div>
+					</div>
+					<div className="outline-box">
+						<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
+						<div className="plus-minus-margin">
+							<Button
+								name="autoMissCount"
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.subtractCount}>-</Button>
+							<Button
+								name="autoMissCount"
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.addCount}>+</Button>
 						</div>
+						<div>{this.state.autoMissCount}</div>
 					</div>
-
-					<div className="center">
-						<div className="outline-box">
-							<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
-							<div className="plus-minus-margin">
-								<Button
-									name="teleopMissCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.subtractCount}>-</Button>
-								<Button
-									name="teleopMissCount"
-									className="plus-minus-button"
-									variant="contained"
-									type="button"
-									onClick={this.addCount}>+</Button>
-							</div>
-							<div>{this.state.teleopMissCount}</div>
-						</div>	
-					</div>
-
-					<div className="center">
-						<div className="outline-box">
-							<h3>{this.props.translate("CLIMB_2022")}</h3>
-							<div className="hangar-buttons">
-								<Button
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.noClimb}>{this.props.translate("NONE")}
-								</Button>
-								<Button
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.lowClimb}>{this.props.translate("LOW")}
-								</Button>
-								<Button
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.midClimb}>{this.props.translate("MID")}
-								</Button>
-								<Button
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.highClimb}>{this.props.translate("HIGH")}
-								</Button>
-								<Button
-									className="plus-minus-button"
-									type="button"
-									variant="contained"
-									onClick={this.traversalClimb}>{this.props.translate("TRAVERSAL")}
-								</Button>
-							</div>
-
-							<div>{this.props.translate(this.state.climbLevel)}</div>
-						</div>
-					</div>
-					<Button className="button" type="button" variant="contained" onClick={this.submitData}>{this.props.translate("SUBMIT_1")}</Button>
-					<img src="/2338logo.png" className="logo"/>
 				</div>
+
+				<h3>{this.props.translate("TELEOP")}</h3>
+				<div className="scores-wrapper">
+					<div className="outline-box">
+						<h3>{this.props.translate("HIGH_GOAL_2022")}</h3>
+						<div className="plus-minus-margin">
+							<Button
+								name="teleopHighCount"
+								className="plus-minus-button"
+								variant="contained"
+								type="button"
+								onClick={this.subtractCount}>-</Button>
+							<Button
+								name="teleopHighCount"
+								className="plus-minus-button"
+								variant="contained"
+								type="button"
+								onClick={this.addCount}>+</Button>
+						</div>
+						<div>{this.state.teleopHighCount}</div>
+					</div>
+					<div className="outline-box">
+						<h3>{this.props.translate("LOW_GOAL_2022")}</h3>
+						<div className="plus-minus-margin">
+							<Button
+								name="teleopLowCount"
+								className="plus-minus-button"
+								variant="contained"
+								type="button"
+								onClick={this.subtractCount}>-</Button>
+							<Button
+								name="teleopLowCount"
+								className="plus-minus-button"
+								variant="contained"
+								type="button"
+								onClick={this.addCount}>+</Button>
+						</div>
+						<div>{this.state.teleopLowCount}</div>
+					</div>
+					<div className="outline-box">
+						<h3>{this.props.translate("MISS_GOAL_2022")}</h3>
+						<div className="plus-minus-margin">
+							<Button
+								name="teleopMissCount"
+								className="plus-minus-button"
+								variant="contained"
+								type="button"
+								onClick={this.subtractCount}>-</Button>
+							<Button
+								name="teleopMissCount"
+								className="plus-minus-button"
+								variant="contained"
+								type="button"
+								onClick={this.addCount}>+</Button>
+						</div>
+						<div>{this.state.teleopMissCount}</div>
+					</div>
+					<div className="outline-box">
+						<h3>{this.props.translate("CLIMB_2022")}</h3>
+						<div className="hangar-buttons">
+							<Button
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.noClimb}>{this.props.translate("NONE")}
+							</Button>
+							<Button
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.lowClimb}>{this.props.translate("LOW")}
+							</Button>
+							<Button
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.midClimb}>{this.props.translate("MID")}
+							</Button>
+							<Button
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.highClimb}>{this.props.translate("HIGH")}
+							</Button>
+							<Button
+								className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.traversalClimb}>{this.props.translate("TRAVERSAL")}
+							</Button>
+						</div>
+
+						<div>{this.props.translate(this.state.climbLevel)}</div>
+					</div>
+				</div>
+
+				<Button className="button" type="button" variant="contained" onClick={this.submitData}>
+					{this.props.translate("SUBMIT_1")}
+				</Button>
+				<img src="/2338logo.png" className="logo"/>
 			</div>
-
-
 		);
 	}
 }
