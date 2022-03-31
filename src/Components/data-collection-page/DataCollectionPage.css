@@ -1,129 +1,131 @@
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    color: #babfb7;
-    background-color: white; /*02243e*/
-    font-family: "Segoe UI";
-    width: auto;
-    height: 100vh;
-    overflow-y: auto;
-  }
-
-.wrapper-dataCollect{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    color: #babfb7;
-    background-color: #02243e; /*02243e*/
-    font-family: "Segoe UI";
-    width: auto;
-    height: 100vh;
-    overflow-y: auto;
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	color: #babfb7;
+	background-color: white;
+	font-family: "Segoe UI";
+	width: auto;
+	height: 100vh;
+	overflow-y: auto;
 }
-  
-  .main-title{
-    margin-bottom: 20px;
-    color: #fe5000;
-    font-family: "AmazObitaemOstrov"; 
-  }
-  
-  .subtitle-1{
-    margin: 0px;
-    margin-bottom: 25px;
-    color: #fe5000;
-    font-family: "AmazObitaemOstrov"; 
-  }
-  
-  .center {
-    display: flex;
-    margin: auto;
-  }
-  
-  .logo {
-    margin: 50px;
-    width: 64px;
-  }
-  
-  .subtitle-2{
-    margin-bottom: 25px;
-    color: #fe5000;
-    font-family: "AmazObitaemOstrov"; 
-  }
-  
-  .text-box{  
-    background-color: #babfb7;
-  }
 
-  .outline-box{
-    outline: 3px solid #babfb7;
-    margin: 10px;
-    padding-bottom: 10px;
-    text-align:center;
-    min-width: 160px; 
-   }
-  
-  .plus-minus-button{
-    color: #fe5000;
-    background-color: #babfb7;
-    margin-right: 12px !important;
-    margin-left: 12px !important;
-  }
-  
-  .plus-minus-margin{
-    margin-right: -3.9px;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .subtitlechange{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .button{
-    color: #fe5000;
-    background-color: #babfb7;
-    margin-top: 50px !important;
-    margin-left: 600px;
-    margin-right: 600px;
-  }
+.wrapper-dataCollect {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	color: #babfb7;
+	background-color: #02243e;
+	font-family: "Segoe UI";
+	width: auto;
+	height: 100vh;
+	overflow-y: auto;
+}
 
-  .css-6hp17o-MuiList-root-MuiMenu-list{
-    background-color: #02243e;
-  }
+.main-title {
+	margin-bottom: 20px;
+	color: #fe5000;
+}
 
-  .space{
-    margin: 15px;
-  }
+.subtitle-1 {
+	margin: 0px;
+	margin-bottom: 25px;
+	color: #fe5000;
+}
 
-  a:link {
-    color: #fe5000;
-  }
-  
-  a:visited {
-    color: #fe5000;
-  }
-  
-  a:hover {
-    color: #babfb7;
-  }
-  
-  a:active {
-    color: #babfb7;
-  }
+.center {
+	display: flex;
+	margin: auto;
+}
 
-  .data_form{
-    margin-bottom: 1rem!important;
-  }
-  
-  /* @media only screen and (min-width:786px) {
-  .center{
-    display: grid;
-  }
+.logo {
+	margin: 50px;
+	width: 64px;
+}
+
+.subtitle-2 {
+	margin-bottom: 25px;
+	color: #fe5000;
+}
+
+.text-box {
+	background-color: #babfb7;
+}
+
+.outline-box {
+	outline: 3px solid #babfb7;
+	margin: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	min-width: 160px;
+}
+
+.plus-minus-button {
+	color: #fe5000;
+	background-color: #babfb7;
+	margin-right: 12px !important;
+	margin-left: 12px !important;
+}
+
+.plus-minus-margin {
+	margin-right: -3.9px;
+	justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+}
+
+.subtitlechange {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.button {
+	color: #fe5000;
+	background-color: #babfb7;
+	margin-top: 50px !important;
+	margin-left: 600px;
+	margin-right: 600px;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+	background-color: #02243e;
+}
+
+a:link {
+	color: #fe5000;
+}
+
+a:visited {
+	color: #fe5000;
+}
+
+a:hover {
+	color: #babfb7;
+}
+
+a:active {
+	color: #babfb7;
+}
+
+.data_form {
+	margin-bottom: 1rem !important;
+}
+
+.hangar-buttons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	row-gap: 16px;
+	width: fit-content;
+	justify-content: space-around;
+}
+
+/* @media only screen and (min-width:786px) {
+.center{
+  display: grid;
+}
 } */

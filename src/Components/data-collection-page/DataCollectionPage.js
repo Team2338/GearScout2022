@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import TextField from '@mui/material/TextField';
-import "./DataCollectionPage.css";
+import './DataCollectionPage.css';
 import GearscoutService from "../../Services/GearscoutService";
 
 
@@ -172,7 +172,8 @@ class DataCollectionPage extends React.Component {
 						value={this.state.scoutingTeamNumber}
 						onChange={this.handleTextBox}
 						placeholder={this.props.translate("TEAM_NUMBER")}
-						className="data_form"></TextField>
+						className="data_form"
+					/>
 					<TextField
 						id="outlined-basic1" 
 						label={this.props.translate("MATCH_NUMBER")}
@@ -182,7 +183,8 @@ class DataCollectionPage extends React.Component {
 						value={this.state.matchNumber}
 						onChange={this.handleTextBox}
 						placeholder={this.props.translate("MATCH_NUMBER")}
-						className="data_form"></TextField>
+						className="data_form"
+					/>
 
 					<h3>{this.props.translate("AUTO")}</h3>
 					<div className="center">
@@ -326,54 +328,44 @@ class DataCollectionPage extends React.Component {
 					<div className="center">
 						<div className="outline-box">
 							<h3>{this.props.translate("CLIMB_2022")}</h3>
-							<div className="center">
-								<div className="plus-minus-margin">
-									<Button
-										className="plus-minus-button"
-										type="button"
-										variant="contained"
-										onClick={this.noClimb}>{this.props.translate("NONE")}</Button>
-								</div>
-								<div className="plus-minus-margin">
-									<Button
-										className="plus-minus-button"
-										type="button"
-										variant="contained"
-										onClick={this.lowClimb}>{this.props.translate("LOW")}</Button>
-								</div>
-								<div className="plus-minus-margin">
-									<Button
-										className="plus-minus-button"
-										type="button"
-										variant="contained"
-										onClick={this.midClimb}>{this.props.translate("MID")}</Button>
-								</div>
-							</div>
-
-							<div className="space"></div>
-
-							<div className="center">
-								<div className="plus-minus-margin">
-									<Button
-										className="plus-minus-button"
-										type="button"
-										variant="contained"
-										onClick={this.highClimb}>{this.props.translate("HIGH")}</Button>
-								</div>
-								<div className="plus-minus-margin">
-									<Button
-										className="plus-minus-button"
-										type="button"
-										variant="contained"
-										onClick={this.traversalClimb}>{this.props.translate("TRAVERSAL")}</Button>
-								</div>
+							<div className="hangar-buttons">
+								<Button
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.noClimb}>{this.props.translate("NONE")}
+								</Button>
+								<Button
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.lowClimb}>{this.props.translate("LOW")}
+								</Button>
+								<Button
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.midClimb}>{this.props.translate("MID")}
+								</Button>
+								<Button
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.highClimb}>{this.props.translate("HIGH")}
+								</Button>
+								<Button
+									className="plus-minus-button"
+									type="button"
+									variant="contained"
+									onClick={this.traversalClimb}>{this.props.translate("TRAVERSAL")}
+								</Button>
 							</div>
 
 							<div>{this.props.translate(this.state.climbLevel)}</div>
 						</div>
 					</div>
 					<Button className="button" type="button" variant="contained" onClick={this.submitData}>{this.props.translate("SUBMIT_1")}</Button>
-					<img src="/2338logo.png" className="logo"></img>
+					<img src="/2338logo.png" className="logo"/>
 				</div>
 			</div>
 
