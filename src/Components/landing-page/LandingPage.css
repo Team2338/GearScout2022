@@ -1,166 +1,194 @@
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: #babfb7;
-    font-family: "Segoe UI";
-  }
-  
-  .main-title{
-    /* margin: 20px; */
-    color: #fe5000;
-    font-family: "AmazObitaemOstrov"; 
-  }
-  
-  .subtitle-1{
-    margin: 0px;
-    margin-bottom: 25px;
-    color: #fe5000;
-    font-family: "AmazObitaemOstrov"; 
-  }
-  
-  .center {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-  }
-  
-  .logo {
-    margin: 50px;
-    margin-left: 650px;
-    margin-right: 650px;
-  }
-  
-  .subtitle-2{
-    margin-bottom: 25px;
-    color: #fe5000;
-    font-family: "AmazObitaemOstrov"; 
-  }
+.wrapper {
+	align-items: center;
+	background-color: white;
+	color: #BABFB7;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow-y: auto;
+	text-align: center;
+	width: auto;
+}
 
-  .subtitlechange{
-    background-color: #02243e;
-    margin-bottom: 15px;
-    padding: 10px;
-    width: 98.8%;
-  }
+.wrapper-dataCollect {
+	align-items: center;
+	background-color: #02243E;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow-y: auto;
+	text-align: center;
+	width: auto;
+}
 
-  .subtitlechange .wrappers{
-    display: flex;
-  }
+.main-title {
+	/* margin: 20px; */
+	color: #FE5000;
+}
 
-  .subtitlechange .wrappers .right{
-    margin-top: 50px;
-    margin-left: 32rem;
-  }
-  .subtitlechange .wrappers .center{
-    margin-top: 34px;
-    font-size: 20px;
-    display: block!important;
-    margin-left: 32rem;
-  }
-  .subtitlechange .wrappers .left{
-    margin-left: 2.5rem;
-  }
-  .subtitlechange .wrappers .center .main-title{
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.subtitle-1 {
+	margin: 0;
+	margin-bottom: 25px;
+	color: #FE5000;
+}
 
-  .css-8c8mkq-MuiButtonBase-root-MuiMenuItem-root.Mui-selected:focus{
-    background-color: rgba(254, 80, 0, 0.493);
-    transition: .3s;
-  }
-  .css-8c8mkq-MuiButtonBase-root-MuiMenuItem-root:hover{
-    background-color: #babfb78e!important;
-    color:#02243e;
-    transition: .3s;
-  }
+.center {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+}
 
-  .points-landingpage{
-    color: #02243e;
-  }
+.logo {
+	margin: 9px 650px 0;
+	width: 5%;
+}
 
-  .login-title{
-    color: #02243e;
-  }
+.subtitle-2 {
+	margin-bottom: 25px;
+	color: #FE5000;
+}
 
-  /* .subtitlechange .wrapper{
-    display: flex;
-    width: 100%;
-    height: 97%;
-    color: purple;
-    padding-left: 1rem;
-    margin-top: 0;
-    background-color: #02243e;
-  } */
-  
-  .text-box{  
-    background-color: #babfb7;
-    margin-left: 700px;
-    margin-right: 700px;
-  }
-  .outline-box{
-    outline: 3px solid #babfb7;
-    margin: 10px;
-    padding: 8px;
-  }
-  
-  .plus-minus-button{
-    color: #fe5000;
-    background-color: #babfb7;
-  }
-  
-  .plus-minus-margin{
-    margin-right: 25px;
-  }
-  
-  .button{
-    color: #fe5000;
-    background-color: #babfb7;
-    margin-top: 30px;
-    margin-left: 600px;
-    margin-right: 600px;
-  }
+.subtitlechange {
+	background-color: #02243E;
+	margin-bottom: 15px;
+	padding: 10px;
+	width: 98.8%;
+}
 
-  .landingpage-forms{
-    margin-bottom: 1rem!important;
-  }
-  #outlined-basic{
-    min-width: 18rem!important;
-    color: #02243e;
-  }
-  #outlined-basic1{
-    border-bottom: solid gray;
-    min-width: 18rem!important;
-    background-color: #444a4e2c;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
-  }
-  #outlined-basic-label{
-    color:#02243e;
-  }
+.subtitlechange .wrappers {
+	display: flex;
+}
 
-  #lang{
-    border: solid gray;
-  }
+.subtitlechange .wrappers .right {
+	margin-top: 50px;
+	margin-left: 32rem;
+}
 
-  .landingpage-logo{
-    height: 9rem;
-  }
+.subtitlechange .wrappers .center {
+	margin-top: 34px;
+	font-size: 20px;
+	display: block !important;
+	margin-left: 32rem;
+}
 
-  .lang-width{
-    min-width: 180px!important;
-  }
+.subtitlechange .wrappers .left {
+	margin-left: 2.5rem;
+}
 
-  @media only screen and (max-width: 700px) {
-    .subtitlechange .wrappers .center{
-      margin-left: 5px;
-      font-size: 18px;
-    }
-    .subtitlechange .wrappers .right{
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-    .subtitlechange .wrappers .left{
-      margin-left: 0rem;
-    }
-  }
+.subtitlechange .wrappers .center .main-title {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.css-8c8mkq-MuiButtonBase-root-MuiMenuItem-root.Mui-selected:focus {
+	background-color: rgba(254, 80, 0, 0.493);
+	transition: .3s;
+}
+
+.css-8c8mkq-MuiButtonBase-root-MuiMenuItem-root:hover {
+	background-color: #BABFB78E !important;
+	color: #02243E;
+	transition: .3s;
+}
+
+.points-landingpage {
+	color: #02243E;
+}
+
+.login-title {
+	color: #02243E;
+}
+
+/* .subtitlechange .wrapper{
+  display: flex;
+  width: 100%;
+  height: 97%;
+  color: purple;
+  padding-left: 1rem;
+  margin-top: 0;
+  background-color: #02243e;
+} */
+
+.text-box {
+	background-color: #BABFB7;
+	margin-left: 700px;
+	margin-right: 700px;
+}
+
+.outline-box {
+	margin: 10px;
+	min-width: 160px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.plus-minus-button {
+	color: #FE5000;
+	background-color: #BABFB7;
+}
+
+.button {
+	color: #FE5000;
+	background-color: #BABFB7;
+	margin-top: 30px;
+	margin-left: 600px;
+	margin-right: 600px;
+	margin-bottom: 3rem !important;
+	width: 18%;
+}
+
+.landingpage-forms {
+	margin-bottom: 1rem !important;
+}
+
+#outlined-basic {
+	min-width: 18rem !important;
+	color: #02243E;
+}
+
+#outlined-basic1 {
+	border-bottom: solid gray;
+	min-width: 18rem !important;
+	background-color: #444A4E2C;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+#outlined-basic-label {
+	color: #02243E;
+}
+
+#lang {
+	border: solid gray;
+}
+
+.landingpage-logo {
+	height: 9rem;
+}
+
+.lang-width {
+	min-width: 180px !important;
+}
+
+@media only screen and (max-width: 700px) {
+	.subtitlechange .wrappers .center {
+		margin-left: 5px;
+		font-size: 18px;
+	}
+
+	.subtitlechange .wrappers .right {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.subtitlechange .wrappers .left {
+		margin-left: 0;
+	}
+
+	.wrapper-dataCollect {
+		min-width: 50% !important;
+	}
+
+	.button {
+		width: 50% !important;
+	}
+}
