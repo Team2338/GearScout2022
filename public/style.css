@@ -7,6 +7,19 @@
 	--blue2338: #002338;
 	--orange2338: #FF5500;
 	--silver2338: #BABABA;
-
-	font-family: Roboto, Segoe UI, Helvetica, Arial, sans-serif;
 }
+
+body {
+	margin: 0;
+	font-family: Roboto, 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Oxygen',
+	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+	monospace;
+}
+
