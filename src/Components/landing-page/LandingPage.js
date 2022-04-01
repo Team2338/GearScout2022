@@ -51,26 +51,21 @@ class LandingPage extends React.Component{
   render(){
     return(
       <div className='wrapper'>
-        <nav className='subtitlechange'>
-          <div className="wrappers">
-            <div className="left">
-              <img src='./2338logo.png' className="landingpage-logo"></img>
-            </div>
-            <div className="center">
-              <h1 className='main-title'>Gear It Forward 2338</h1>
-            </div>
-            <div className="right">
-              <FormControl>
-                <Select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language}> 
-                  <MenuItem value="english">English</MenuItem>
-                  <MenuItem value="spanish">Español</MenuItem>
-                  <MenuItem value="french">Français</MenuItem>    
-                </Select>
-              </FormControl>  
-            </div>
+        <div className="header">
+          <div className="left">
+            <img src='./2338logo.png' className="landingpage-logo"/>
           </div>
-        </nav>
-        
+          <h1 className='main-title'>Gear It Forward 2338</h1>
+          <span>
+            <Select name="language" id="lang" onChange={this.props.changeLanguage} value={this.props.language} size="medium">
+              <MenuItem value="english">English</MenuItem>
+              <MenuItem value="spanish">Español</MenuItem>
+              <MenuItem value="french">Français</MenuItem>
+              <MenuItem value="hindi">हिन्दी</MenuItem>
+            </Select>
+          </span>
+        </div>
+
         <h1 className="login-title">Login: </h1>
         <div className="landingpage-forms">
           {/* <h3>{this.props.translate("TEAM_NUMBER")}: </h3> */}
@@ -78,17 +73,14 @@ class LandingPage extends React.Component{
         </div>
 
         <div className="landingpage-forms">
-          {/* <h3>{this.props.translate("EVENT_CODE")}: </h3> */}
           <TextField name="eventCode" id="outlined-basic" label={this.props.translate("EVENT_CODE")} variant="filled" type='Text' onChange={this.handleChange} value={this.state.eventCode} placeholder={this.props.translate("EVENT_CODE")}/>
         </div>
 
         <div className="landingpage-forms">
-          {/* <h3>{this.props.translate("SCOUTER_NAME")}: </h3> */}
           <TextField name="scouterName" id="outlined-basic" label={this.props.translate("SCOUTER_NAME")} variant="filled" type='Text' onChange={this.handleChange} value={this.state.scouterName} placeholder={this.props.translate("SCOUTER_NAME")}/>
         </div>
 
         <div className="landingpage-forms">
-          {/* <h3>{this.props.translate("SECRET_CODE")}: </h3> */}
           <TextField name="secretCode" id="outlined-basic" label={this.props.translate("SECRET_CODE")} variant="filled" type='Text' onChange={this.handleChange} value={this.state.secretCode} placeholder={this.props.translate("SECRET_CODE")}/>
         </div>
 
