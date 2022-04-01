@@ -65,7 +65,7 @@ class LandingPage extends React.Component {
           </span>
 				</div>
 
-				<h1 className="login-title">Login: </h1>
+				<h1 className="login-title">{this.props.translate('SIGN_IN')}: </h1>
 				<div className="landingpage-forms">
 					{/* <h3>{this.props.translate("TEAM_NUMBER")}: </h3> */}
 					<TextField name="teamNumber" id="outlined-basic" label={this.props.translate('YOUR_TEAM_NUMBER')} variant="filled" type="Text"

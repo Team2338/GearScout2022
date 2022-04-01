@@ -1,48 +1,30 @@
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	color: #BABFB7;
-	background-color: white;
-	width: auto;
-	height: 100vh;
-	overflow-y: auto;
-}
-
 .wrapper-dataCollect {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
-	color: #BABFB7;
-	background-color: #02243E;
-	width: auto;
+	color: var(--silver2338);
+	background-color: var(--blue2338);
+	width: 100vw;
 	height: 100vh;
 	overflow-y: auto;
-}
-
-.main-title {
-	margin-bottom: 20px;
-	color: #FE5000;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	box-sizing: border-box;
 }
 
 .logo {
-	margin: 50px;
+
 	width: 64px;
 }
 
 .app-name {
 	margin-bottom: 25px;
-	color: #FE5000;
-}
-
-.text-box {
-	background-color: #BABFB7;
+	color: var(--orange2338);
 }
 
 .outline-box {
-	border: 3px solid #BABFB7;
+	border: 3px solid var(--silver2338);
 	margin: 10px;
 	padding-bottom: 10px;
 	text-align: center;
@@ -54,41 +36,42 @@
 	flex-direction: row;
 	flex-flow: wrap;
 	justify-content: center;
+	height: fit-content;
 }
 
 .plus-minus-button {
-	color: #FE5000;
-	background-color: #BABFB7;
+	color: var(--orange2338);
+	background-color: var(--silver2338);
 	margin-right: 12px !important;
 	margin-left: 12px !important;
 }
 
 .button {
-	color: #FE5000;
-	background-color: #BABFB7;
+	color: var(--orange2338);
+	background-color: var(--silver2338);
 	margin-top: 50px !important;
 	margin-left: 600px;
 	margin-right: 600px;
 }
 
 .css-6hp17o-MuiList-root-MuiMenu-list {
-	background-color: #02243E;
+	background-color: var(--blue2338);
 }
 
 a:link {
-	color: #FE5000;
+	color: var(--orange2338);
 }
 
 a:visited {
-	color: #FE5000;
+	color: var(--orange2338);
 }
 
 a:hover {
-	color: #BABFB7;
+	color: var(--silver2338);
 }
 
 a:active {
-	color: #BABFB7;
+	color: var(--silver2338);
 }
 
 .data_form {
@@ -103,9 +86,3 @@ a:active {
 	width: fit-content;
 	justify-content: space-around;
 }
-
-/* @media only screen and (min-width:786px) {
-.center{
-  display: grid;
-}
-} */
