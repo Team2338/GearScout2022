@@ -16,7 +16,8 @@ const INITIAL_STATE = {
 	climbState: 0,
 	climbLevel: "none",
 	matchNumber: "",
-	scoutingTeamNumber: ""
+	scoutingTeamNumber: "",
+	startPosition: "",
 }
 
 class DataCollectionPage extends React.Component {
@@ -93,6 +94,24 @@ class DataCollectionPage extends React.Component {
 		});
 	};
 
+	startPositionHanger = (event) => {
+		this.setState({
+			startPosition: "Hanger"
+		})
+	};
+
+	startPositionCenter = (event) => {
+		this.setState({
+			startPosition: "Center"
+		})
+	};
+
+	startPositionTerminal = (event) => {
+		this.setState({
+			startPosition: "Terminal"
+		})
+	};
+
 	submitData = () => {
 		alert("Data Submited!")
 		const url = "/team/" + this.props.teamNumber;
@@ -146,9 +165,12 @@ class DataCollectionPage extends React.Component {
 					gamemode: "TELEOP",
 					objective: "CLIMB_2022",
 					count: this.state.climbState
+				},
+				{
+					gamemode: "AUTO",
+					objective: "STARTING_POSITION",
+					count: this.state.startPosition
 				}
-
-
 			]
 		};
 		GearscoutService.post(url, body, config);
@@ -186,6 +208,28 @@ class DataCollectionPage extends React.Component {
 
 					<h3>{this.props.translate("AUTO")}</h3>
 					<div className="center">
+						<div className="outline-box">
+							<h3>Starting Position</h3>
+							<Button
+						    	className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.startPositionTerminal}>Terminal
+							</Button>
+							<Button
+						    	className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.startPositionCenter}>Center
+							</Button>
+							<Button
+						    	className="plus-minus-button"
+								type="button"
+								variant="contained"
+								onClick={this.startPositionHanger}>Hanger
+							</Button>
+							<div>{this.state.startPosition.toString()}</div>
+						</div>
 						<div className="outline-box">
 							<h3>{this.props.translate("MOBILITY_2022")}</h3>
 							<div className="plus-minus-margin">

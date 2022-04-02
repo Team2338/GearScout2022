@@ -124,8 +124,6 @@ const languages = {
 		"NONE":"None",
 		"MATCH_NUMBER":"Match number",
 		"ANALYTICS":"Analytics",
-		
-		
 	},
 	spanish:{
 		"SIGN_IN": "Iniciar sesión",
