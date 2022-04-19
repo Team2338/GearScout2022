@@ -14,7 +14,6 @@
 }
 
 .logo {
-
 	width: 64px;
 }
 
@@ -72,6 +71,10 @@ a:hover {
 
 a:active {
 	color: var(--silver2338);
+}
+
+#robot-number-input, #match-number-input {
+	min-width: 10em;
 }
 
 .data_form {

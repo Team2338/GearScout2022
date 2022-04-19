@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import { InputAdornment } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
@@ -67,31 +68,85 @@ class LandingPage extends React.Component {
 
 				<h1 className="login-title">{this.props.translate('SIGN_IN')}: </h1>
 				<div className="landingpage-forms">
-					{/* <h3>{this.props.translate("TEAM_NUMBER")}: </h3> */}
-					<TextField name="teamNumber" id="outlined-basic" label={this.props.translate('YOUR_TEAM_NUMBER')} variant="filled" type="Text"
-					           onChange={this.handleChange} value={this.state.teamNumber}/>
+					<TextField
+						name="teamNumber"
+						id="outlined-basic"
+						label={this.props.translate('YOUR_TEAM_NUMBER')}
+						variant="filled"
+						type="number"
+						onChange={this.handleChange}
+						value={this.state.teamNumber}
+						InputProps={{
+							startAdornment: <InputAdornment position="start">#</InputAdornment>
+						}}
+						inputProps={{
+							min: 0,
+							max: 9999
+						}}
+					/>
 				</div>
 
 				<div className="landingpage-forms">
-					<TextField name="eventCode" id="outlined-basic" label={this.props.translate('EVENT_CODE')} variant="filled" type="Text" onChange={this.handleChange}
-					           value={this.state.eventCode} placeholder={this.props.translate('EVENT_CODE')}/>
+					<TextField
+						name="eventCode"
+						id="outlined-basic"
+						label={this.props.translate('EVENT_CODE')}
+						variant="filled"
+						type="text"
+						onChange={this.handleChange}
+						value={this.state.eventCode}
+						placeholder={this.props.translate('EVENT_CODE')}
+						inputProps={{
+							maxLength: 32
+						}}
+					/>
 				</div>
 
 				<div className="landingpage-forms">
-					<TextField name="scouterName" id="outlined-basic" label={this.props.translate('SCOUTER_NAME')} variant="filled" type="Text"
-					           onChange={this.handleChange} value={this.state.scouterName} placeholder={this.props.translate('SCOUTER_NAME')}/>
+					<TextField
+						name="scouterName"
+						id="outlined-basic"
+						label={this.props.translate('SCOUTER_NAME')}
+						variant="filled"
+						type="text"
+						onChange={this.handleChange}
+						value={this.state.scouterName}
+						placeholder={this.props.translate('SCOUTER_NAME')}
+						inputProps={{
+							maxLength: 32
+						}}
+					/>
 				</div>
 
 				<div className="landingpage-forms">
-					<TextField name="secretCode" id="outlined-basic" label={this.props.translate('SECRET_CODE')} variant="filled" type="Text" onChange={this.handleChange}
-					           value={this.state.secretCode} placeholder={this.props.translate('SECRET_CODE')}/>
+					<TextField
+						name="secretCode"
+						id="outlined-basic"
+						label={this.props.translate('SECRET_CODE')}
+						variant="filled"
+						type="text"
+						onChange={this.handleChange}
+						value={this.state.secretCode}
+						placeholder={this.props.translate('SECRET_CODE')}
+						inputProps={{
+							maxLength: 32
+						}}
+					/>
 				</div>
 
 				<div className="points-landingpage">*{this.props.translate('SECRET_CODE_HELPER_1')}*</div>
 				<div className="points-landingpage">*{this.props.translate('SECRET_CODE_HELPER_2')}*</div>
 				<div className="points-landingpage">*{this.props.translate('SECRET_CODE_HELPER_3')}*</div>
-				<Button name="submit" className="button" type="button" variant="contained" size="medium"
-				        onClick={this.handleClick}>{this.props.translate('SUBMIT_1')}</Button>
+				<Button
+					name="submit"
+					className="button"
+					type="button"
+					variant="contained"
+					size="medium"
+					onClick={this.handleClick}
+				>
+					{this.props.translate('SUBMIT_1')}
+				</Button>
 
 			</div>
 		);

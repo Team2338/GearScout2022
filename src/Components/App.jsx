@@ -176,8 +176,8 @@ const languages = {
 		'HIGH': 'Alto',
 		'TRAVERSAL': 'Traversal',
 		'NONE': 'No',
-		'MATCH_NUMBER': 'Numero de partido'
-
+		'MATCH_NUMBER': 'Numero de partido',
+		'ANALYTICS': 'Analítica'
 
 	},
 	french: {
@@ -228,8 +228,8 @@ const languages = {
 		'HIGH': 'Haut',
 		'TRAVERSAL': 'Traversal',
 		'NONE': 'Rien',
-		'MATCH_NUMBER': 'Match number'
-
+		'MATCH_NUMBER': 'Numéro de match',
+		'ANALYTICS': 'Analytique'
 	},
 	hindi: {
 		'SIGN_IN': 'साइन इन करें',
